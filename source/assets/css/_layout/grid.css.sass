@@ -1,18 +1,187 @@
 @import "susy"
 
-$total-columns  : 7
-$column-width   : 4em
-$gutter-width   : 1em
+$total-columns  : 6
+$column-width   : 60px
+$gutter-width   : 20px
 $grid-padding   : $gutter-width
 $break          : 12
 
-.page
+
+#cinema
+  .cinemaImg
+    display: none
+
+#head
+  .buyButton
+    display: none
+
+#navigation
+  background: url(/assets/img/site/bgnavi-mobile.png) bottom center no-repeat
+
+.wrapper
   @include container($total-columns, $break)
-  @include susy-grid-background
+  //@include susy-grid-background
+
+  &.features
+    > .box
+      @include span-columns(6, 6)
+
+  &.social
+    > .owl
+      display: none
+    > .content
+      width: 100%
+      text-align: center
+    > .box
+      margin-top: 20px
+      &.twitter
+        margin-left: 10px
+
+  &.quotes
+    > .flexslider
+      .slides
+        > .slide
+          > .logoImg
+            margin-left: 0
+
+  &.faq
+    > .box
+      @include span-columns(6, 6)
+
+  &.install
+    ul
+      @include span-columns(6, 6)
+    > .teaserImg
+      @include span-columns(6, 6)
+
+  &.settings
+    ul
+      @include span-columns(6, 6)
+    > .teaserImg
+      @include span-columns(6, 6)
+
+  &.example
+    >.row
+      @include span-columns(6, 6)
+      > .box
+        @include span-columns(6, 6)
+        > .nr
+          @include span-columns(1, 10)
+        > .content
+          @include span-columns(9 omega, 10)
+
+footer
+  > .wrapper
+    > .subtitle
+      float: right
+      font-size: 18px
+    > .powered
+      clear: both
+      text-align: center
+      line-height: 26px
+
 
 @include at-breakpoint($break)
-  .page
-    @include susy-grid-background
-  .main
-    $main-columns: 10
-    @include span-columns($main-columns omega, $break)
+
+  #cinema
+    > .wrapper
+
+      > .box
+        @include span-columns(6, $break)
+        @include nth-omega(2n)
+
+        &.cinemaImg
+          display: block
+
+  #head
+    .buyButton
+      display: block
+
+  #navigation
+    background: url(/assets/img/site/bgnavi.png) bottom center no-repeat
+
+  .wrapper
+    //@include susy-grid-background
+    $main-columns: 12
+    @include span-columns($main-columns)
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+    &.features
+      > .box
+        @include span-columns(4, $break)
+        &.last
+          margin-right: 0
+
+    &.howto
+      > .box
+        @include span-columns(4, $break)
+        &.last
+          margin-right: 0
+
+    &.social
+      > .owl
+        display: block
+      > .content
+        float: left
+        text-align: left
+        width: auto
+        margin-right: 30px
+        margin-left: 80px
+      > .box
+        margin-top: 0
+
+    &.quotes
+      > .flexslider
+        .slides
+          > .slide
+            > .logoImg
+              margin-left: 10%
+
+    &.faq
+      > .box
+        @include span-columns($break, $break)
+
+    &.install
+      ul
+        @include span-columns(8, $break)
+      > .teaserImg
+        @include span-columns(4, $break)
+
+    &.settings
+      ul
+        @include span-columns(8, $break)
+        li
+          margin-left: 50px
+      > .teaserImg
+        @include span-columns(4, $break)
+
+    &.example
+      >.row
+        @include span-columns(12, $break)
+        > .box
+          @include span-columns(6, $break)
+          @include nth-omega(2n)
+
+
+  footer
+    height: 130px
+    > .wrapper
+
+      > .subtitle
+        float: left
+        font-size: 24px
+
+      > .powered
+        float: right
+        margin-top: -63px
+        padding: 0
+        line-height: 25px
+
+
+  .introText
+    @include squish(2,2)
+    @include span-columns(8, $break)
+
+

@@ -6,7 +6,7 @@
 # Settings
 ###
 
-set :site_title, "Site name"
+set :site_title, "Spriteowl"
 set :site_url, "http://www.spriteowl.com"
 set :site_description, "Meta description."
 set :site_keywords, "keyword-one, keyword-two"
@@ -28,8 +28,8 @@ activate :livereload
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/img'
-set :js_assets_paths, ["#{root}/components/"]
-set :css_assets_paths, ["#{root}/components//"]
+set :js_assets_paths, ["#{root}/components"]
+set :css_assets_paths, ["#{root}/components"]
 
 ###
 # Compass

@@ -1,13 +1,168 @@
 ---
-title:
+title: Home
 description:
 ---
 
-%p
-  This is a default page for
-  %a{:href => "http://html5boilerplate.com/"} HTML5 Boilerplate 3.0
-  adapted as a HAML
-  %a{:href => "http://middlemanapp.com/"} Middleman 3.0
-  project template, using
-  %a{:href => "http://susy.oddbird.net/"} Susy,
-  SCSS, Coffeescript, Sprockets and more.
+
+%header.home
+  #head
+    .wrapper
+      %h1.logo Spriteowl - Photoshop Extension
+
+      %a{title: "Buy Spriteowl", href: "buy.html", class: "buyButton"}
+        .buyButtonInfo
+          .buyButtonHead
+            Buy Spriteowl
+          .buyButtonSubhead
+            CS6 / Mac & Win
+        .buyButtonPrice
+          $
+          %span.bigPrice> 14
+          %span .99
+
+  #cinema
+    .wrapper
+      .box
+        %p.subtitle Improve your workflow
+        %h2.title Convert your Photoshop files to Css, Less, Sass, Scss and Stylus Sprites
+        %a{title: "Buy Spriteowl", href: "buy.html", class: "buyButton"}
+          .buyButtonInfo
+            .buyButtonHead
+              Buy Spriteowl
+            .buyButtonSubhead
+              CS6 / Mac & Win
+          .buyButtonPrice
+            $
+            %span.bigPrice> 14
+            %span .99
+
+      .box.cinemaImg
+        %img{src: "assets/img/cinema/spriteowl-extension-colors.png"}
+        
+    
+  #navigation
+    .wrapper
+      .mainNavigation
+        %ul
+          %li.active
+            %a{title: "Home", href: "index.html"} Home
+          %li
+            %a{title: "How to", href: "howto.html"} How to
+          %li
+            %a{title: "Help", href: "help.html"} Help
+          %li
+            %a{title: "How to", href: "buy.html"} Buy
+
+
+
+.section
+  .wrapper.features
+    %h2 Spriteowl features
+
+    %p.introText
+      Spriteowl is a Photoshop Extension that allows you to magically create Css or Less code and a .png Sprite-file. Improve your workflow with Spriteowl is easy peasy. And quick! You can do nice stuff. Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+
+    .box.icon-code
+      %h3.title Css & Less support
+      %p.content For now we have a Css, Less, Sass, Scss and Stylus output but there is more to come. Stay tuned!
+
+    .box.icon-settings
+      %h3.title Customizable code
+      %p.content Customise the generated Css code with seperator and prefixes for your class names.
+
+    .box.icon-heart.last
+      %h3.title Easy to use
+      %p.content Just install Spriteowl with the Adobe Extension Manager and let the Magic happen.
+
+    .box.icon-ps
+      %h3.title CS6 for Mac & Windows
+      %p.content For the best performance we just support Adobe Photoshop CS6
+
+    .box.icon-display
+      %h3.title Retina ready
+      %p.content Our Extension is ready for Retina and HiDPI Displays.
+
+    .box.icon-money.last
+      %h3.title Money-Back guarantee
+      %p.content If you don‘t like what you get, we give your money back.
+
+
+.section.bgDark
+  .wrapper.howto
+    %h2 How does Spriteowl work
+
+    .box
+      %img.teaserImg{src: "assets/img/content/how1.png"}
+      %h3.title Photoshop
+      %p.content Place your Icons and Name your Layers
+
+    .box.arrows
+      %img.teaserImg{src: "assets/img/content/how2.png"}
+      %h3.title Spriteowl
+      %p.content Configure the export settings and let the magic happen!
+
+
+
+    .box.last
+      %img.teaserImg{src: "assets/img/content/how3.png"}
+      %h3.title Css/Less/Sass/Stylus + Png
+      %p.content Import the generated Code + Png file(s) direct to your Project
+
+.section
+  .wrapper.quotes
+    %h2 What others say about Spriteowl
+
+    .flexslider
+      %ul.slides
+        %li.slide
+          %img.logoImg{src: "assets/img/content/clientDummy.png"}
+          .slideText
+            %p.quote Spriteowl has been the perfect addition to our workflow. It has allowed me to spend more time in Photoshop, doing what I love, while providing accurate results I can trust.
+            %p.user Max Muster, Senoir Webdesigner
+
+        %li.slide
+          %img.logoImg{src: "assets/img/content/clientDummy.png"}
+          .slideText
+            %p.quote Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+            %p.user Max Muster, Senoir Webdeveloper
+
+        %li.slide
+          %img.logoImg{src: "assets/img/content/clientDummy.png"}
+          .slideText
+            %p.quote Neque pecun modut est neque nonor et imper ned libidig met, consectetur adipiscing elit, sed ut labore et dolore magna aliquam is nostrud exercitation ullam mmodo consequet.
+            %p.user Max Muster, Senoir Webdesigner
+
+.section.bgDark
+  .wrapper.social
+    %img.owl{src: "assets/img/content/owls/like-me-owl.png"}
+
+    .content
+      If you like this page share it with your friends
+
+    .box.twitter
+      %a{href: "https://twitter.com/share", class: "twitter-share-button", "data-dnt" => "true"} Tweet
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    .box.facebook
+      %div{class: "fb-like", "data-send" => "true", "data-layout" => "button_count", "data-width" => "300", "data-show-faces" => "false", "data-font" => "arial"}
+      :javascript
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    .box.googleplus
+
+      %div{ class: "g-plus", "data-action" => "share", "data-annotation" => "bubble" }
+      :javascript
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+
+

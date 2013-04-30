@@ -9,21 +9,40 @@
     %title= page_title
     %meta{:content => page_description, :name => "description"}
     %meta{:content => "width=device-width", :name => "viewport"}
+    %script{:src => "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"}
     %link{:rel => "author", :name => "humans.txt"}
+    %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Patua+One", :type => "text/css"}
 
     -#Favicon Options:
     -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
     -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
 
 
-    = javascript_include_tag "components/modernizr"
+    = javascript_include_tag "modernizr/modernizr"
     = stylesheet_link_tag "site"
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-    %div{:class => "page"}
-      %header
-      %active{:class => "main", :role => "main"}= yield
-      %footer
+
+    %div{:class => "main", :role => "main"}= yield
+    %footer
+      .wrapper
+        %a{title: "Buy Spriteowl", href: "buy.html", class: "buyButton"}
+          .buyButtonInfo
+            .buyButtonHead
+              Buy Spriteowl
+            .buyButtonSubhead
+              CS6 / Mac & Win
+          .buyButtonPrice
+            $
+            %span.bigPrice> 14
+            %span .99
+
+        .subtitle
+          Improve your workflow!
+
+        .powered
+          Spriteowl is powered by
+          %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wai"} We Are Interactive
 
     = javascript_include_tag "site"
 
@@ -32,3 +51,4 @@
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
+
