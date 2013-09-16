@@ -58,6 +58,7 @@ $break          : 12
     ul
       @include span-columns(6, 6)
     > .teaserImg
+      margin-bottom: 20px
       @include span-columns(6, 6)
 
   &.example
@@ -65,16 +66,23 @@ $break          : 12
       @include span-columns(6, 6)
       > .box
         @include span-columns(6, 6)
+
+        &.teaserImg, &.code
+          margin-top: 20px
         > .nr
           @include span-columns(1, 10)
         > .content
           @include span-columns(9 omega, 10)
 
+
 footer
   > .wrapper
+    > .buyButton
+      float: left
     > .subtitle
-      float: right
-      font-size: 18px
+      float: left
+      font-size: 17px
+      display: inline
     > .powered
       clear: both
       text-align: center
@@ -163,14 +171,14 @@ footer
         > .box
           @include span-columns(6, $break)
           @include nth-omega(2n)
+          &.teaserImg, &.code
+            margin-top: 0
 
 
   footer
     height: 130px
     > .wrapper
-
       > .subtitle
-        float: left
         font-size: 24px
 
       > .powered
