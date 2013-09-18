@@ -1,0 +1,23 @@
+
+.mainNavigation
+  %ul
+    - if (current_page.data.title == 'Home')
+      %li.active
+        %a{title: "Home", href: "index.html"} Home
+    - else
+      %li
+        %a{title: "Home", href: "index.html"} Home
+    - if (current_page.data.title == 'How to')
+      %li.active
+        %a{title: "How to", href: "howto.html"} How to
+    -else
+      %li
+        %a{title: "How to", href: "howto.html"} How to
+    - if (current_page.data.title == 'Help')
+      %li.active
+        %a{title: "Help", href: "help.html"} Help
+    -else
+      %li
+        %a{title: "Help", href: "help.html"} Help
+    %li
+      %a{title: "How to", href: "http://spriteowl.fetchapp.com/sell/oophapee"} Buy

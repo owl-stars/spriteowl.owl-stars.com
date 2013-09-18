@@ -9,51 +9,21 @@ description:
     .wrapper
       %h1.logo Spriteowl - Photoshop Extension
 
-      %a{title: "Buy Spriteowl", href: "http://spriteowl.fetchapp.com/sell/oophapee", class: "buyButton"}
-        .buyButtonInfo
-          .buyButtonHead
-            Buy Spriteowl
-          .buyButtonSubhead
-            CS6 / Mac & Win
-        .buyButtonPrice
-          $
-          %span.bigPrice> 14
-          %span .99
+      = partial "partial/buybutton"
 
   #cinema
     .wrapper
       .box
         %p.subtitle Improve your workflow
         %h2.title Convert your Photoshop files to Css, Less, Sass, Scss and Stylus Sprites
-        %a{title: "Buy Spriteowl", href: "http://spriteowl.fetchapp.com/sell/oophapee", class: "buyButton"}
-          .buyButtonInfo
-            .buyButtonHead
-              Buy Spriteowl
-            .buyButtonSubhead
-              CS6 / Mac & Win
-          .buyButtonPrice
-            $
-            %span.bigPrice> 14
-            %span .99
-
+        = partial "partial/buybutton"
 
       .box.cinemaImg
         %img{src: "assets/img/cinema/spriteowl-extension-colors.png"}
-        
     
   #navigation
     .wrapper
-      .mainNavigation
-        %ul
-          %li.active
-            %a{title: "Home", href: "index.html"} Home
-          %li
-            %a{title: "How to", href: "howto.html"} How to
-          %li
-            %a{title: "Help", href: "help.html"} Help
-          %li
-            %a{title: "How to", href: "http://spriteowl.fetchapp.com/sell/oophapee"} Buy
-
+      = partial "partial/navigation"
 
 
 .section
@@ -109,6 +79,7 @@ description:
       %h3.title Css/Less/Sass/Stylus + Png
       %p.content Import the generated Code + Png file(s) direct to your Project
 
+
 .section
   .wrapper.quotes
     %h2 What others say about Spriteowl
@@ -132,6 +103,7 @@ description:
           .slideText
             %p.quote Neque pecun modut est neque nonor et imper ned libidig met, consectetur adipiscing elit, sed ut labore et dolore magna aliquam is nostrud exercitation ullam mmodo consequet.
             %p.user Max Muster, Senoir Webdesigner
+
 
 .section.bgDark
   .wrapper.social
@@ -165,5 +137,3 @@ description:
           po.src = 'https://apis.google.com/js/plusone.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
         })();
-
-

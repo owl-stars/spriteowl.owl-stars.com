@@ -1,5 +1,5 @@
 ---
-title: Buy
+title: How to
 description:
 ---
 
@@ -23,20 +23,10 @@ description:
   #cinema
     .wrapper
       %h2.title How to use Spriteowl
-        
     
   #navigation
     .wrapper
-      .mainNavigation
-        %ul
-          %li
-            %a{title: "Home", href: "index.html"} Home
-          %li.active
-            %a{title: "How to", href: "howto.html"} How to
-          %li
-            %a{title: "Help", href: "help.html"} Help
-          %li
-            %a{title: "How to", href: "http://spriteowl.fetchapp.com/sell/oophapee"} Buy
+      = partial "partial/navigation"
 
 
 .section
@@ -130,7 +120,6 @@ description:
                 }
               }
 
-
     .row
       .box
         .nr
@@ -145,9 +134,6 @@ description:
           = preserve do
             :escaped
               <div id="coffe">Kaffe</div>
-
-
-
 
 
 .section.bgDark
@@ -186,6 +172,3 @@ description:
       %li
         .big Trim:
         Switch to On and Spriteowl removes the border blank space of your exportet .png
-
-
-
