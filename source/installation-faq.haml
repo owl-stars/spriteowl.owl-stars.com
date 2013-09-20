@@ -4,30 +4,12 @@ description:
 ---
 
 
-%header
-  #head
-    .wrapper
-      %h1.logo Spriteowl - Photoshop Extension
-
-      %a{title: "Buy Spriteowl", href: "buy.html", class: "buyButton"}
-        .buyButtonInfo
-          .buyButtonHead
-            Buy Spriteowl
-          .buyButtonSubhead
-            CS6 / Mac & Win
-        .buyButtonPrice
-          $
-          %span.bigPrice> 14
-          %span .99
+%header.help
+  = partial "partial/head"
 
   #cinema
     .wrapper
       %h2.title Spriteowl Help
-        
-    
-  #navigation
-    .wrapper
-      = partial "partial/navigation"
 
 
 .section

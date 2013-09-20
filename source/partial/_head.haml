@@ -1,0 +1,24 @@
+#topbar
+  .wrapper
+    %ul.sitenavi
+      %li
+        %a{title: "Owl-Stars", href: "http://www.owl-stars.com"}
+          .home Owl-Stars
+      %li.active
+        %a{title: "Spriteowl", href: "http://spriteowl.owl-stars.com"} Spriteowl
+      %li
+        %a{title: "Cssowl", href: "http://cssowl.owl-stars.com"} Cssowl
+
+    .madeby
+      Spriteowl is made by
+      %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
+
+#head
+  .wrapper
+    %h1.logo Spriteowl - Photoshop Extension
+
+    = partial "partial/buybutton"
+
+#navigation
+  .wrapper
+    = partial "partial/navigation"

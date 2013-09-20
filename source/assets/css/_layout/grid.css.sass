@@ -15,12 +15,13 @@ $break          : 12
   .buyButton
     display: none
 
+
+
 #navigation
-  background: url(/assets/img/site/bgnavi-mobile.png) bottom center no-repeat
+  background: url('/assets/img/site/bgnavi-mobile.png') bottom center no-repeat
 
 .wrapper
   @include container($total-columns, $break)
-  //@include susy-grid-background
 
   &.features
     > .box
@@ -75,18 +76,28 @@ $break          : 12
           @include span-columns(9 omega, 10)
 
 
-footer
-  > .wrapper
-    > .buyButton
-      float: left
-    > .subtitle
-      float: left
-      font-size: 17px
-      display: inline
-    > .powered
-      clear: both
+//footer
+
+  //> .wrapper
+    > .buy
+  //    @include span-columns(6, 6)
       text-align: center
-      line-height: 26px
+      > .buyButton
+        display: inline-block
+
+   // > .newsletter
+  //    @include span-columns(6, 6)
+      text-align: center
+
+  //> .wrapper
+    > .info
+  //    @include span-columns(6, 6)
+      text-align: center
+
+      //> .madeby
+        //clear: both
+       // text-align: center
+        //line-height: 26px
 
 
 @include at-breakpoint($break)
@@ -106,7 +117,7 @@ footer
       display: block
 
   #navigation
-    background: url(/assets/img/site/bgnavi.png) bottom center no-repeat
+    background: url('/assets/img/site/bgnavi.png') bottom center no-repeat
 
   .wrapper
     //@include susy-grid-background
@@ -115,6 +126,7 @@ footer
     float: none
     margin-left: auto
     margin-right: auto
+
 
     &.features
       > .box
@@ -176,16 +188,23 @@ footer
 
 
   footer
-    height: 130px
     > .wrapper
-      > .subtitle
-        font-size: 24px
+      > .buy
+        @include span-columns(4, $break)
 
-      > .powered
-        float: right
-        margin-top: -63px
-        padding: 0
-        line-height: 25px
+      > .newsletter
+        @include span-columns(8 omega, $break)
+        //text-align: right
+
+    > .wrapper
+      > .info
+        @include span-columns(12, $break)
+
+        > .madeby
+          //float: right
+          //margin-top: -63px
+          padding: 0
+          line-height: 25px
 
 
   .introText

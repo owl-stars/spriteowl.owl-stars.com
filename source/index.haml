@@ -5,11 +5,7 @@ description:
 
 
 %header.home
-  #head
-    .wrapper
-      %h1.logo Spriteowl - Photoshop Extension
-
-      = partial "partial/buybutton"
+  = partial "partial/head"
 
   #cinema
     .wrapper
@@ -20,10 +16,6 @@ description:
 
       .box.cinemaImg
         %img{src: "assets/img/cinema/spriteowl-extension-colors.png"}
-    
-  #navigation
-    .wrapper
-      = partial "partial/navigation"
 
 
 .section
@@ -124,7 +116,7 @@ description:
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+          js.src = "https://connect.facebook.net/de_DE/all.js#xfbml=1";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 

@@ -7,17 +7,19 @@
     - else
       %li
         %a{title: "Home", href: "index.html"} Home
-    - if (current_page.data.title == 'How to')
+
+    - if (current_page.data.title == 'Documentation')
       %li.active
-        %a{title: "How to", href: "howto.html"} How to
+        %a{title: "Documentation", href: "documentation.html"} Documentation
     -else
       %li
-        %a{title: "How to", href: "howto.html"} How to
-    - if (current_page.data.title == 'Help')
+        %a{title: "Documentation", href: "documentation.html"} Documentation
+
+    - if (current_page.data.title == 'Installation & FAQ')
       %li.active
-        %a{title: "Help", href: "help.html"} Help
+        %a{title: "Installation & FAQ", href: "installation-faq.haml"} Installation & FAQ
     -else
       %li
-        %a{title: "Help", href: "help.html"} Help
+        %a{title: "Installation & FAQ", href: "installation-faq.haml"} Installation & FAQ
     %li
       %a{title: "How to", href: "http://spriteowl.fetchapp.com/sell/oophapee"} Buy
