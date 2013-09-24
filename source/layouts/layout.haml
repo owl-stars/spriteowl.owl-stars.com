@@ -24,29 +24,30 @@
   %body{:class => page_classes}
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
 
-    %div{:class => "main", :role => "main"}= yield
+    %div{:class => "main", :role => "main"}
+      = yield
 
     %footer
       .wrapper
-        %a{title: "Buy Spriteowl", href: "http://spriteowl.fetchapp.com/sell/oophapee", class: "buyButton"}
-          .buyButtonInfo
-            .buyButtonHead
-              Buy Spriteowl
-            .buyButtonSubhead
-              CS6 / Mac & Win
-          .buyButtonPrice
-            $
-            %span.bigPrice> 14
-            %span .99
 
-        .subtitle
-          Improve your workflow!
+        .buy
+          = partial "partial/buybutton"
 
-        .powered
-          Spriteowl is powered by
-          %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wai"} We Are Interactive
+        .newsletter
+          .title
+            Never miss a new update again
 
-    = javascript_include_tag "site"
+          %form#mailchimpform
+            %input#mc-email{placeholder: "email", type: "email"}
+            %button{type: "submit"} Submit
+
+            %label{for: "mc-email"}
+
+      .wrapper
+        .info
+          .madeby
+            Spriteowl is made by
+            %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
 
     :javascript
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -57,17 +58,5 @@
       <!-- UserVoice -->
       (function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()
 
-      <!-- A tab to launch the Classic Widget -->
-      UserVoice = window.UserVoice || [];
-      UserVoice.push(['showTab', 'classic_widget', {
-        mode: 'full',
-        primary_color: '#59371f',
-        link_color: '#f6a818',
-        default_mode: 'support',
-        forum_id: 200882,
-        tab_label: 'Feedback & Support',
-        tab_color: '#cd1f1f',
-        tab_position: 'middle-left',
-        tab_inverted: false
-      }]);
-
+    %script{:src => "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"}
+    = javascript_include_tag "site"

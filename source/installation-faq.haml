@@ -4,39 +4,12 @@ description:
 ---
 
 
-%header
-  #head
-    .wrapper
-      %h1.logo Spriteowl - Photoshop Extension
-
-      %a{title: "Buy Spriteowl", href: "buy.html", class: "buyButton"}
-        .buyButtonInfo
-          .buyButtonHead
-            Buy Spriteowl
-          .buyButtonSubhead
-            CS6 / Mac & Win
-        .buyButtonPrice
-          $
-          %span.bigPrice> 14
-          %span .99
+%header.help
+  = partial "partial/head"
 
   #cinema
     .wrapper
       %h2.title Spriteowl Help
-        
-    
-  #navigation
-    .wrapper
-      .mainNavigation
-        %ul
-          %li
-            %a{title: "Home", href: "index.html"} Home
-          %li
-            %a{title: "How to", href: "howto.html"} How to
-          %li.active
-            %a{title: "Help", href: "help.html"} Help
-          %li
-            %a{title: "How to", href: "http://spriteowl.fetchapp.com/sell/oophapee"} Buy
 
 
 .section
@@ -95,10 +68,6 @@ description:
       %img{src: "assets/img/content/owls/tree-owl.png"}
 
 
-
-
-
-
 .section.bgDark
   .wrapper.faq
     %h2 Here are answers to some questions about Spriteowl
@@ -153,4 +122,3 @@ description:
         I found a bug. How can I tell you?
       %p.content
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
-
