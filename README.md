@@ -1,34 +1,33 @@
 # Spriteowl
 
+The spriteowl.owl-stars.com website powered by Middleman.
+
 ## Requirements
 
 To build, run and deploy this project you need the following tools:
 
 * [Rvm](https://rvm.io/)
-* [Middleman](http://middlemanapp.com)
 * [Rake](http://rake.rubyforge.org/)
+* [Middleman](http://middlemanapp.com)
 * [Bower](http://twitter.github.com/bower/)
 
-##### Rvm
+### Rvm
 
 To install `rvm` run:
 
 ```
-\curl -L https://get.rvm.io | bash -s stable --ruby
+\curl -L https://get.rvm.io | bash -s stable
 ```
 
-Note you might get the ruby-2.0.0 release. If so, you might wanna run:
+To update `rvm` run:
 
 ```
-rmv install ruby-1.9.3
-rvm pkg install openssl
-rvm reinstall 1.9.3 --with-openssl-dir=$rvm_path/usr  --with-gcc=clang 
-rvm uninstall ruby-2.0.0
+rvm get stable
 ```
 
-You can install [Jewelybox](http://jewelrybox.unfiniti.com/) to switch the default ruby version.
+*Install [Jewelybox](http://jewelrybox.unfiniti.com/) to see installed Rubys and Gems.*
 
-#### Middleman
+### Middleman
 
 To install `middleman` run:
 
@@ -36,7 +35,7 @@ To install `middleman` run:
 gem install middleman
 ```
 
-#### Rake
+### Rake
 
 To install `rake` run:
 
@@ -44,7 +43,7 @@ To install `rake` run:
 gem install rake
 ```
 
-#### Bower
+### Bower
 
 To install `bower` run:
 
@@ -58,7 +57,7 @@ If you need npm you can install it with:
 sudo port install npm
 ```
 
-## Setup Workspace
+## Workspace
 
 To setup your workspace checkout the repository:
 
@@ -73,6 +72,5 @@ cd middleman-project_spriteowl
 rake init
 ```
 
-## Deployment
-
-TODO
+## License
+Copyright (c) 2013 [www.wejustdostuff.com](http://www.wejustdostuff.com)

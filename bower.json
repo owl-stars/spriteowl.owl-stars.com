@@ -1,6 +1,6 @@
 {
-  "name": "bavarianapps",
-  "version": "0.1.0",
+  "name": "spriteowl",
+  "private": true,
   "dependencies": {
     "jquery": "~1.9.1",
     "modernizr": "~2.6.2",
