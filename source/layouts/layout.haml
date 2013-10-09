@@ -6,14 +6,18 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width", :name => "viewport"}
     %title= page_title
     %meta{:content => page_description, :name => "description"}
-    %meta{:content => "width=device-width", :name => "viewport"}
-    %link{:rel => "author", :name => "humans.txt"}
-    %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Patua+One", :type => "text/css"}
-    = stylesheet_link_tag "site"
-    = javascript_include_tag "modernizr/modernizr"
-  %body
+
+    -#Favicon Options:
+    -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
+    -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
+
+    = javascript_include_tag "modernizr"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "all"
+
+  %body{:class => page_classes}
 
     %div{:class => "main", :role => "main"}
       = yield
@@ -40,14 +44,10 @@
             Spriteowl is made by
             %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
 
-    :javascript
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
+    = javascript_include_tag "//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"
+    = javascript_include_tag "//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js"
+    = javascript_include_tag "//www.google-analytics.com/ga.js"
+    = javascript_include_tag "main"
 
-      <!-- UserVoice -->
-      (function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()
-
-    %script{:src => "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"}
-    = javascript_include_tag "site"
+    :coffee
+      _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]
