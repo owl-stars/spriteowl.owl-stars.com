@@ -1,0 +1,21 @@
+{
+  "name": "ajaxchimp",
+  "version": "1.0.2",
+  "main": "./jquery.ajaxchimp.js",
+  "dependencies": {
+    "jquery": ">=1.9.0"
+  },
+  "ignore": [
+    "**/.*",
+    "./ajaxchimp.jquery.json"
+  ],
+  "gitHead": "cbf5667f5dbf3a28719efd0903352e0bb953420f",
+  "readme": "# ajaxChimp\n\nAjaxChimp is a jQuery plugin that lets you ajaxify your mailchimp form.\n\nUse this if you hate the jarring transition to the mailchimp website on submitting a mailchimp.\n\n**Note**: This relies on an undocumented feature at mailchimp that uses JSONP to allow cross-domain ajax to work. You have been warned. (It has however, been around for at least 3 years that I know of, and probably more.)\n\n## Install\n\nJust add the script to your webpage (along with jQuery ofcourse). Get it here:\n\n```\ncurl -O https://raw.github.com/scdoshi/jquery-ajaxchimp/master/jquery.ajaxchimp.js\n```\n\n#### bower\n\n```\nbower install ajaxchimp\n```\n\n## Requirements\n\n* jQuery \n\n**Note**: Developed with 1.9.1, but it should work with earlier versions. If it does or does not work with a particular version, please open an issue on github.\n\n## Use\n\n#### Method 1: Use the mailchimp form\n\n```js\n$('form-selector').ajaxChimp();\n```\n\n#### Method 2: Use a blank form with an input of type email\n\n```js\n$('form-selector').ajaxChimp({\n    url: 'mailchimp-post-url'\n});\n```\n\nThe mailchimp post url will look like this:\n\n```\nhttp://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f\n```\n\n**Note**: The advantage of using method 1 is that even if ajax or javascript fails, the form will fallback and work as a normal mailchimp form.\n\n## Callback\n\nOptionally, you can specify a callback with either method to run after the\najax query to mailchimp succeeds or fails.\n\n```js\n$('form-selector').ajaxChimp({\n    callback: callbackfunction,\n    url: 'mailchimp-post-url'\n});\n```\n\nThe JSONP response from mailchimp will be passed to the callback function\n\n```js\nfunction callbackFunction (resp) {\n    if (resp.result === 'success') {\n        // Do stuff\n    }\n}\n```\n\n## Label\n\nIf a label element is included in the form for the email input, then the success or error message will be displayed in it. A `valid` or `error` class will also be added accordingly.\n\n## Example Form (method 2)\n\n```html\n    <form id=\"mc-form\">\n        <input id=\"mc-email\" type=\"email\" placeholder=\"email\">\n        <label for=\"mc-email\"></label>\n        <button type=\"submit\">Submit</button>\n    </form>\n```\n\n```js\n$('#mc-form').ajaxChimp({\n    url: 'http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'\n});\n```\n",
+  "readmeFilename": "README.md",
+  "_id": "ajaxchimp@1.0.2",
+  "description": "AjaxChimp is a jQuery plugin that lets you ajaxify your mailchimp form.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scdoshi/jquery-ajaxchimp.git"
+  }
+}
