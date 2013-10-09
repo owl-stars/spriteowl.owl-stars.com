@@ -1,14 +1,10 @@
 //= require "normalize-css/normalize.css"
-//= require "flexslider/flexslider.css"
+//= require "_flexslider"
 //= require "_layout/grid"
 
 @import "_layout/mixins"
 @import "_layout/cssowl"
 @import "_layout/sprite"
-
-
-
-
 
 
 // variables
@@ -268,10 +264,10 @@ footer
       position: relative
       margin-top: 20px
       text-align: right
-      
+
       input
         width: 160px
-      
+
       button
         width: 70px
         color: $white
@@ -279,7 +275,7 @@ footer
         height: 26px
         @include backgroundGradient($lightorange, $darkorange)
         text-transform: uppercase
-        
+
       label
         position: absolute
         right: 0
@@ -291,8 +287,8 @@ footer
         font:
           family: $fontspecial
           size: 18px
-        
-      
+
+
 
 
   > .wrapper
@@ -309,8 +305,8 @@ footer
 
 
 
-        
-    
+
+
 // components
 
 a.buyButton
@@ -474,6 +470,9 @@ a.buyButton
       -o-box-shadow: none
       margin-bottom: 50px
 
+      .flex-direction-nav a
+        overflow: visible
+
       .slides
         margin: 0
         padding: 0
@@ -538,7 +537,7 @@ a.buyButton
           @include sprite-button-up-up-float-after()
 
           &:hover
-            @include sprite-button-up-over-float-after()            
+            @include sprite-button-up-over-float-after()
 
         > .content
           display: block
@@ -549,7 +548,7 @@ a.buyButton
         cursor: pointer
 
         &:hover
-          @include sprite-button-down-over-float-after()       
+          @include sprite-button-down-over-float-after()
 
       > .content
         display: none

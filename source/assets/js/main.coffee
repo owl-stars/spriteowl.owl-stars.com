@@ -1,7 +1,7 @@
-#= require jquery
+#= require jquery/jquery.js
 #= require ajaxchimp/jquery.ajaxchimp
 #= require flexslider/jquery.flexslider
-#= require jQuery-EasyTabs/lib/jquery.easytabs
+#= require easytabs/lib/jquery.easytabs
 
 
 
@@ -38,7 +38,7 @@ $(document).ready ->
   window.expandBox = new SpriteOwl.ExpandBox
 
 
-# ------ SpriteOwl 
+# ------ SpriteOwl
 
 SpriteOwl = ->
 
@@ -56,7 +56,7 @@ SpriteOwl.ExpandBox:: =
 		target = $(event.currentTarget)
 		if(!target.parent().hasClass('active'))
 			target.parent().addClass('active')
-		else 
+		else
 			target.parent().removeClass('active')
 
 
