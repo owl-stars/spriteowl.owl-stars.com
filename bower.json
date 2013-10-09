@@ -3,10 +3,10 @@
   "private": true,
   "dependencies": {
     "jquery": "~1.9.1",
-    "modernizr": "~2.6.2",
-    "normalize-css": "~2.1.0",
     "easytabs": "latest",
     "ajaxchimp": "latest",
-    "flexslider": "latest"
+    "modernizr": "~2.6.2",
+    "flexslider": "latest",
+    "normalize-css": "~2.1.0"
   }
 }

@@ -9,13 +9,28 @@
     %meta{:content => "width=device-width", :name => "viewport"}
     %title= page_title
     %meta{:content => page_description, :name => "description"}
-
-    -#Favicon Options:
-    -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
-    -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
+    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "120x120", href: "/apple-touch-icon-120x120-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "/apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "/apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "57x57", href: "/apple-touch-icon-57x57-precomposed.png" }
+    %link{ rel: "apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
+    %link{ rel: "shortcut icon", href: "favicon.png" }
+    %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
     = javascript_include_tag "modernizr"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "all"
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23550216-4']);
+      _gaq.push(['_gat._anonymizeIp', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
   %body{:class => page_classes}
 
@@ -46,8 +61,9 @@
 
     = javascript_include_tag "//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"
     = javascript_include_tag "//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js"
-    = javascript_include_tag "//www.google-analytics.com/ga.js"
     = javascript_include_tag "main"
 
     :coffee
       _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]
+
+

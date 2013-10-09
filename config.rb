@@ -22,6 +22,7 @@ set :site_description, "Edit your config.rb to set the global description."
 #
 # With no layout
 page "/404.html", :layout => false
+page "/release/*.xml", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
@@ -76,4 +77,13 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+
+# Deploy-specific configuration
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :rsync
+  deploy.host   = "spriteowl.owl-stars.com"
+  deploy.path   = "/var/www/spriteowl.owl-stars.com/htdocs"
 end
