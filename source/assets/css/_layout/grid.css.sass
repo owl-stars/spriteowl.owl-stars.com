@@ -1,10 +1,11 @@
 @import "susy"
 
-$total-columns  : 6
+$total-columns  : 8
 $column-width   : 60px
 $gutter-width   : 20px
 $grid-padding   : $gutter-width
-$break          : 12
+$container-style: static
+$container-width: 660px
 
 
 #cinema
@@ -15,17 +16,15 @@ $break          : 12
   .buyButton
     display: none
 
-
-
 #navigation
   background: url('/assets/img/site/bgnavi-mobile.png') bottom center no-repeat
 
 .wrapper
-  @include container($total-columns, $break)
+  @include container($total-columns, 12)
 
   &.features
     > .box
-      @include span-columns(6, 6)
+      @include span-columns(8, 8)
 
   &.social
     > .owl
@@ -47,26 +46,26 @@ $break          : 12
 
   &.faq
     > .box
-      @include span-columns(6, 6)
+      @include span-columns($total-columns, $total-columns)
 
   &.install
     ul
-      @include span-columns(6, 6)
+      @include span-columns($total-columns, $total-columns)
     > .teaserImg
-      @include span-columns(6, 6)
+      @include span-columns($total-columns, $total-columns)
 
   &.settings
     ul
-      @include span-columns(6, 6)
+      @include span-columns($total-columns, $total-columns)
     > .teaserImg
       margin-bottom: 20px
-      @include span-columns(6, 6)
+      @include span-columns($total-columns, $total-columns)
 
   &.example
     >.row
-      @include span-columns(6, 6)
+      @include span-columns($total-columns, $total-columns)
       > .box
-        @include span-columns(6, 6)
+        @include span-columns($total-columns, $total-columns)
 
         &.teaserImg, &.code
           margin-top: 20px
@@ -76,37 +75,35 @@ $break          : 12
           @include span-columns(9 omega, 10)
 
 
-//footer
-
-  //> .wrapper
+footer
+  > .wrapper
     > .buy
-  //    @include span-columns(6, 6)
-      text-align: center
-      > .buyButton
-        display: inline-block
+      @include span-columns(4, $total-columns)
 
-   // > .newsletter
-  //    @include span-columns(6, 6)
-      text-align: center
+    > .newsletter
+      @include span-columns(4 omega, $total-columns)
 
-  //> .wrapper
+  > .wrapper
     > .info
-  //    @include span-columns(6, 6)
-      text-align: center
+      @include span-columns(8, $total-columns)
 
-      //> .madeby
-        //clear: both
-       // text-align: center
-        //line-height: 26px
+      > .madeby
+        padding: 0
+        line-height: 25px    
+    
 
 
-@include at-breakpoint($break)
+@include at-breakpoint(12)
+
+
+  $total-columns  : 12
+  $container-width: 960px
 
   #cinema
     > .wrapper
 
       > .box
-        @include span-columns(6, $break)
+        @include span-columns(6, $total-columns)
         @include nth-omega(2n)
 
         &.cinemaImg
@@ -120,23 +117,20 @@ $break          : 12
     background: url('/assets/img/site/bgnavi.png') bottom center no-repeat
 
   .wrapper
-    //@include susy-grid-background
-    $main-columns: 12
-    @include span-columns($main-columns)
+    width: $container-width
     float: none
     margin-left: auto
     margin-right: auto
 
-
     &.features
       > .box
-        @include span-columns(4, $break)
+        @include span-columns(4, $total-columns)
         &.last
           margin-right: 0
 
     &.howto
       > .box
-        @include span-columns(4, $break)
+        @include span-columns(4, $total-columns)
         &.last
           margin-right: 0
 
@@ -161,27 +155,27 @@ $break          : 12
 
     &.faq
       > .box
-        @include span-columns($break, $break)
+        @include span-columns($total-columns, $total-columns)
 
     &.install
       ul
-        @include span-columns(8, $break)
+        @include span-columns(8, $total-columns)
       > .teaserImg
-        @include span-columns(4, $break)
+        @include span-columns(4, $total-columns)
 
     &.settings
       ul
-        @include span-columns(8, $break)
+        @include span-columns(8, $total-columns)
         li
           margin-left: 50px
       > .teaserImg
-        @include span-columns(4, $break)
+        @include span-columns(4, $total-columns)
 
     &.example
       >.row
-        @include span-columns(12, $break)
+        @include span-columns(12, $total-columns)
         > .box
-          @include span-columns(6, $break)
+          @include span-columns(6, $total-columns)
           @include nth-omega(2n)
           &.teaserImg, &.code
             margin-top: 0
@@ -190,15 +184,15 @@ $break          : 12
   footer
     > .wrapper
       > .buy
-        @include span-columns(4, $break)
+        @include span-columns(4, $total-columns)
 
       > .newsletter
-        @include span-columns(8 omega, $break)
+        @include span-columns(8 omega, $total-columns)
         //text-align: right
 
     > .wrapper
       > .info
-        @include span-columns(12, $break)
+        @include span-columns(12, $total-columns)
 
         > .madeby
           //float: right
@@ -209,6 +203,6 @@ $break          : 12
 
   .introText
     @include squish(2,2)
-    @include span-columns(8, $break)
+    @include span-columns(8, $total-columns)
 
 

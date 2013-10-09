@@ -1,0 +1,58 @@
+/*
+Syntax error: File to import not found or unreadable: _layout/mixins.
+              Load path: /Users/basti/Documents/Workspaces/middleman/middleman-project_spriteowl/source/assets/css
+        on line 5 of site.css.sass
+
+1: //= require "normalize-css/normalize.css"
+2: //= require "flexslider/flexslider.css"
+3: //= require "_layout/grid"
+4: 
+5: @import "_layout/mixins"
+6: @import "_layout/cssowl"
+7: @import "_layout/sprite"
+8: 
+9: 
+10: 
+
+Backtrace:
+site.css.sass:5
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/import_node.rb:45:in `import'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/tree/root_node.rb:20:in `render'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/engine.rb:315:in `_render'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/engine.rb:262:in `render'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/exec.rb:424:in `watch_or_update'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/exec.rb:307:in `process_result'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/exec.rb:41:in `parse'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/lib/sass/exec.rb:21:in `parse!'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/gems/sass-3.2.6/bin/sass:9:in `<top (required)>'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/bin/sass:19:in `load'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/bin/sass:19:in `<main>'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/basti/.rvm/gems/ruby-1.9.3-p392/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: _layout/mixins.\A               Load path: /Users/basti/Documents/Workspaces/middleman/middleman-project_spriteowl/source/assets/css\A         on line 5 of site.css.sass\A \A 1: //= require \"normalize-css/normalize.css\"\A 2: //= require \"flexslider/flexslider.css\"\A 3: //= require \"_layout/grid\"\A 4: \A 5: @import \"_layout/mixins\"\A 6: @import \"_layout/cssowl\"\A 7: @import \"_layout/sprite\"\A 8: \A 9: \A 10: "; }

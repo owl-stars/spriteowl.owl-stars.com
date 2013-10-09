@@ -71,7 +71,11 @@ h3, h4, .big
 p
   margin: 0
 
-
+input, button
+  border: 1px solid $bordergrey
+  @include roundedBox($cornerRaduis)
+  height: 24px
+  padding: 0 5px
 
 
 
@@ -261,14 +265,39 @@ footer
       margin-bottom: 20px
 
     > .newsletter
+      position: relative
       margin-top: 20px
+      text-align: right
+      
+      input
+        width: 160px
+      
+      button
+        width: 70px
+        color: $white
+        border: none
+        height: 26px
+        @include backgroundGradient($lightorange, $darkorange)
+        text-transform: uppercase
+        
+      label
+        position: absolute
+        right: 0
+        z-index: 2
+        width: 230px
 
-      //text-align: center
+      > .title
+        margin-bottom: 10px
+        font:
+          family: $fontspecial
+          size: 18px
+        
+      
 
 
   > .wrapper
     > .info
-      border-top: 1px dotted #171717
+      border-top: 1px dashed #444444
       text-align: center
 
       > .madeby
@@ -280,7 +309,8 @@ footer
 
 
 
-
+        
+    
 // components
 
 a.buyButton
@@ -297,7 +327,7 @@ a.buyButton
     float: left
     text-align: center
     padding: 10px 20px
-    border-right: 1px dotted #ffffff
+    border-right: 1px dashed #ffffff
 
     > .buyButtonHead
       font:
