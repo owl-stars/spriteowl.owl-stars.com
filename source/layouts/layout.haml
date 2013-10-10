@@ -17,9 +17,9 @@
     = javascript_include_tag "modernizr"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "all"
 
-  %body{:class => page_classes}
+  %body{:class => page_classes} 
 
-    %div{:class => "main", :role => "main"}
+    .main
       = yield
 
     %footer
@@ -44,8 +44,9 @@
             Spriteowl is made by
             %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
 
+
+
     = javascript_include_tag "//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"
-    = javascript_include_tag "//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js"
     = javascript_include_tag "//www.google-analytics.com/ga.js"
     = javascript_include_tag "main"
 
