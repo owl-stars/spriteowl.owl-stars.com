@@ -22,7 +22,7 @@ set :site_description, "Edit your config.rb to set the global description."
 #
 # With no layout
 page "/404.html", :layout => false
-page "/release/*.xml", :layout => false
+page "/updates/*.xml", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
@@ -45,6 +45,9 @@ page "/release/*.xml", :layout => false
 
 # Reload the browser automatically whenever files change
 activate :livereload
+
+# Cody syntax highlightning
+activate :syntax, :line_numbers => false
 
 # Methods defined in the helpers block are available in templates
 # helpers do

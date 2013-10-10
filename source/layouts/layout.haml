@@ -37,6 +37,18 @@
     %div{:class => "main", :role => "main"}
       = yield
 
+
+
+      .section.bgDark
+        .wrapper.social
+          %img.owl{src: "assets/img/content/owls/like-me-owl.png"}
+
+          .content
+            Spread the word:
+
+          .box.twitter
+            %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
+
     %footer
       .wrapper
 
@@ -59,11 +71,8 @@
             Spriteowl is made by
             %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
 
-    = javascript_include_tag "//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"
-    = javascript_include_tag "//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js"
-    = javascript_include_tag "main"
+    = javascript_include_tag "//google-code-prettify.googlecode.com/svn/loader/run_prettify.js", "//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js", "main"
 
-    :coffee
-      _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]
-
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 

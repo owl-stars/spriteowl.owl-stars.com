@@ -4,6 +4,7 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.1.5"
 gem "middleman-deploy"
 gem "middleman-favicon-maker"
+gem "middleman-syntax", "~> 1.2.1"
 gem "middleman-livereload", "~> 3.1.0"
 gem "susy", "~> 1.0.9"
 

@@ -1,3 +1,5 @@
-version: 1.0.1
-download: http://spriteowl.owl-stars.com
+version: 1.0.0
+download:
+  cc: https://wejustdostuff.fetchapp.com/permalink/onaixo
+  cs6: https://wejustdostuff.fetchapp.com/permalink/onaixo
 description: Initial Spriteowl release.

@@ -5,6 +5,7 @@
 @import "_layout/mixins"
 @import "_layout/cssowl"
 @import "_layout/sprite"
+@import "_layout/pygments.github"
 
 
 // variables
@@ -360,10 +361,6 @@ a.buyButton
         size: 18px
 
 
-
-
-
-
 // sections
 
 .section
@@ -382,18 +379,16 @@ a.buyButton
     clear: both
 
   .code
-    background: #fff
     height: 400px
     overflow: auto
+    background: #fff
 
     pre
-      font-size: 13px
-      line-height: 20px
-      padding: 10px
       margin: 0
-
-      &.prettyprint
-        border: none
+      padding: 10px
+      font-size: 12px
+      white-space: pre
+      line-height: 15px
 
 
 
@@ -501,7 +496,8 @@ a.buyButton
 
   .social
     position: relative
-    padding: 25px 0
+    padding-top: 25px
+    padding-bottom: 25px
 
     > .content
       color: $fontgrey
