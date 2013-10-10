@@ -34,7 +34,7 @@
 
   %body{:class => page_classes}
 
-    %div{:class => "main", :role => "main"}
+    .main
       = yield
 
 
@@ -71,8 +71,9 @@
             Spriteowl is made by
             %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
 
-    = javascript_include_tag "//google-code-prettify.googlecode.com/svn/loader/run_prettify.js", "//widget.uservoice.com/sHUfZzRbekUSUXtnzYwCdA.js", "main"
+    = javascript_include_tag "main"
 
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
 
