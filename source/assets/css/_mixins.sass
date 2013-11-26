@@ -11,3 +11,10 @@
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
   background-image: -webkit-linear-gradient($from, $to)
   background-image: -o-linear-gradient($from, $to)
+
+@mixin transition
+  -webkit-transition: $transitionStyle
+  -moz-transition: $transitionStyle
+  -ms-transition: $transitionStyle
+  -o-transition: $transitionStyle
+  transition: $transitionStyle

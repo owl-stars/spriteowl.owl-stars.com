@@ -2,7 +2,10 @@
 #= require ajaxchimp/jquery.ajaxchimp
 #= require flexslider/jquery.flexslider
 #= require easytabs/lib/jquery.easytabs
-
+#= require sass-bootstrap/js/collapse
+#= require sass-bootstrap/js/transition
+#= require sass-bootstrap/js/modal
+#= require sass-bootstrap/js/tab
 
 
 # ------ Init
@@ -11,16 +14,19 @@ $(window).load ->
   $(".flexslider").flexslider
     animation: "slide"
 
-  $(".tabbox").easytabs()
-
   $("#mailchimpform").ajaxChimp
-    #callback: callbackChimp
-    url: "http://wejustdostuff.us7.list-manage.com/subscribe/post?u=9d88ce76bb9c9bb3bea3601f0&id=1e7429d7b8"
+    url: "http://wejustdostuff.us7.list-manage.com/subscribe/post?u=9d88ce76bb9c9bb3bea3601f0&id=2e63c2f86c"
+
+  $(".tabbox .nav-tabs a").click (e) ->
+    e.preventDefault()
+    $(this).tab "show"
 
 
 $(document).ready ->
   window.spriteOwl = new SpriteOwl
   window.expandBox = new SpriteOwl.ExpandBox
+
+
 
 
 # ------ SpriteOwl
@@ -46,6 +52,3 @@ SpriteOwl.ExpandBox:: =
 
 
 
-
-#callbackChimp = (resp) ->
-#  alert "sers"  if resp.result is "success"

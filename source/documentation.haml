@@ -2,108 +2,172 @@
 title: Documentation
 ---
 
-%header.howto
-  = partial "partial/head"
-
-  #cinema
-    .wrapper
+.section.cinema
+  .container
+    .col-xs-12.info
       %h2.title Spriteowl explained
 
-.section
-  .wrapper.howto
-    %h2 What it's all about
-
-    %h3 The usual process of working with Sprites and Css looks like this:
-
-    .box
-      %img.teaserImg{src: "assets/img/content/how1.png"}
-      %h3.title Photoshop
-      %p.content Create a Sprite Psd
-
-    .box.arrows
-      %img.teaserImg{src: "assets/img/content/how3.png"}
-      %h3.title Export Image
-      %p.content Export the Sprite image
-
-    .box.last
-      %img.teaserImg{src: "assets/img/content/how3.png"}
-      %h3.title Measure & Code
-      %p.content Write Css code by looking up each element
-
-    %p.introText
-      Writing Css code for a Sprite image can be quite a time consuming job as you always need to measure or look up each element's the x, y, width and height. And if elements change you need to go through your whole code to see where it needs to be updated.
-      Wouldn't it be great if you could just forget about this and let it someone else handle it? Well, lucky you, that's where the Spriteowl comes in.
-
-    %h3 Doing it the Spriteowl way:
-
-    .box
-      %img.teaserImg{src: "assets/img/content/how1.png"}
-      %h3.title Photoshop
-      %p.content Place your elements and name your groups and layers
-
-    .box.arrows
-      %img.teaserImg{src: "assets/img/content/how2.png"}
-      %h3.title Spriteowl
-      %p.content Choose your export options and let the magic happen!
-
-    .box.last
-      %img.teaserImg{src: "assets/img/content/how3.png"}
-      %h3.title Css, Less, Sass/Scss, Stylus + Png
-      %p.content Import the generated stylesheet + Png files into your project
-
-    %p.introText
-      With Spriteowl you will not just get an optimized Png if you wish but it will generate a Stylesheet for you.
-      Depending of the output Syntax you will have more or less benefits. If you choose basic Css you will get a Stylesheet with a few style classes that will i.e. display an element in a Html tag.
-      We strongly recommend you though to work with one of the Preprocessors. When selecting Less, Sass/Scss or Stylus you will get a Stylesheet in which contains each layer's position and dimension as well as
-      mixins from the #{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'}. From then on you won't need to worry about changes in the original Psd file again.
-
-.section.bgDark
-  .wrapper.settings
-    %h2 The Extension
-
-    .teaserImg
-      %img{src: "assets/img/content/spriteowl-extension.png"}
-
-    %ul
-      %li
-        .big Syntax:
-        Select the output syntax. We support Css, Less, Sass/Scss and Stylus.
-
-      %li
-        .big Optimize:
-        Switch it on and Spriteowl will <i>trim</i> and <i>posterize</i> the output Png.
-
-      %li
-        .big Export
-        Click and choose the location where to save the Stylesheet + Png.
 
 
-.section
-  .wrapper.example
-    %h2 Walktrough
+.section.benefits
+  .container
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1.intro
+        %h2 The Benefits in detail
 
-    %p.introText
-      Probably the best way to explain you how to use Spriteowl is to give you a simple walkthrough. (The files can be downloaded #{link_to 'here', '#', :target => '_blank' })
+        %p.introText
+          Writing Css code for a Sprite image can be quite a <strong>time consuming job as you always need to measure or look up each element's the x, y, width and height</strong>. And if elements change you need to go through your whole code to see where it needs to be updated.
+          Wouldn't it be great if you could just forget about this and let it someone else handle it? <strong>Well, lucky you, that's where the Spriteowl comes in.</strong>
 
     .row
-      .box
+      .col-sm-4
+        %h3.title
+          What you get
+        %p.content
+          With Spriteowl you will not just get an <strong>optimized Png</strong> of your Photoshop sprite file, you also get a Stylesheet in which contains each <strong>layer's position (x/y) and dimension (width/height)</strong>.
+
+      .col-sm-4
+        %h3.title
+          Preprocessors support
+        %p.content
+          When selecting one of the Preprocessors <strong>Less, Sass/Scss or Stylus</strong> you will get a Stylesheet as well as useful mixins from the <strong>#{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'}</strong> with a lot of functions to position your sprite elements.
+
+      .col-sm-4
+        %h3.title
+          Namespace support
+        %p.content
+          Spriteowl uses namespaces for bring your sprite elements into your Html, so you be no longer worry about position changes of your sprite elements in the original Psd file.
+
+
+
+.section.bgDark.howto
+  .container
+
+    .no-spriteowl
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2.intro
+          %h2 This is the usual process of working with Sprites and Css
+
+      .row
+        .col-sm-3
+          .box
+            .arrow
+            %img.teaserImg{src: "assets/img/content/howto/how1.png"}
+            %h3.title Photoshop
+            %p.content Create a Sprite Psd
+
+        .col-sm-3
+          .box
+            .arrow
+            %img.teaserImg{src: "assets/img/content/howto/no-how2.png"}
+            %h3.title Export Image
+            %p.content Export the Sprite image
+
+
+        .col-sm-3
+          .box
+            .arrow
+            %img.teaserImg{src: "assets/img/content/howto/no-how3-boring.png"}
+            %h3.title Measure
+            %p.content Looking up each element
+
+
+        .col-sm-3
+          .box
+            %img.teaserImg{src: "assets/img/content/howto/no-how4.png"}
+            %h3.title Code
+            %p.content Write Css code
+
+    .yes-spriteowl
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2.intro
+          %h2
+            And here is the Spriteowl way
+      .row
+        .col-sm-4
+          .box
+            .arrow
+            %img.teaserImg{src: "assets/img/content/howto/how1.png"}
+            %h3.title Photoshop
+            %p.content Place your elements and name your groups and layers
+
+        .col-sm-4
+          .box
+            .arrow
+            %img.teaserImg{src: "assets/img/content/howto/yes-how2-magic.png"}
+            %h3.title Spriteowl
+            %p.content Choose your export options and let the magic happen!
+
+        .col-sm-4
+          .box
+            %img.teaserImg{src: "assets/img/content/howto/yes-how3.png"}
+            %h3.title Css, Less, Sass/Scss, Stylus + Png
+            %p.content Import the generated stylesheet + Png files into your project
+
+
+
+
+
+.section.settings
+  .container
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2.intro
+        %h2 The Extension
+
+    .row
+      .col-sm-6
+        .teaserImg
+          %img{src: "assets/img/content/spriteowl-extension.png"}
+
+      .col-sm-6
+        %ul
+          %li
+            .big Syntax:
+            Select the output syntax. We support Css, Less, Sass/Scss and Stylus.
+
+          %li
+            .big Optimize:
+            Switch it on and Spriteowl will trim and posterize the output Png.
+
+          %li
+            .big Export
+            Click and choose the location where to save the Stylesheet + Png.
+
+
+.section.bgDark.example
+  .container
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2.intro
+        %h2 A simple walktrough
+
+        %p.introText
+          Probably the best way to explain you how to use Spriteowl is to give you a simple walkthrough.
+          %br (The files can be downloaded #{link_to 'here', '#', :target => '_blank' })
+
+    .row
+      .col-sm-6
         .nr
           1.
         .content
           %h3
             Photoshop
           %p
-            Place your elements and name your groups and layers.
+            Before you can export your sprite, please <strong>place your elements</strong> and <strong>name your groups and layers</strong>.
             %br
+            %br
+            <strong>Tip:</strong>
             %br
             You need at least one top level group as Spriteowl will export each top level group as a separate sprite.
             Groups and layers should be named according to class names in html since you will them later on in your Stylesheet.
+            %br
+            %br
 
-      .box.teaserImg
-        %img{src: "assets/img/content/example/psd-layers.png"}
+      .col-sm-6
+        .teaserImg
+          %img{src: "assets/img/content/example/psd-layers.png"}
 
     .row
-      .box
+      .col-sm-6
         .nr
           2.
         .content
@@ -113,148 +177,145 @@ title: Documentation
             Now its time to export your Psd.
             %br
             %br
-            Choose your "Syntax", whether you want to "Optimize" the Png or not and then click "Export" and choose a destination folder.
-      .box.teaserImg
-        %img{src: "assets/img/content/spriteowl-extension.png"}
+            Choose your "<strong>Syntax</strong>", whether you want to "<strong>Optimize</strong>" the Png or not and then click "<strong>Export</strong>" and choose a destination folder.
+            %br
+            After exporting your Psd you will find two files, a Png and a Stylesheet.
+            If you look into the Stylesheet you will see how Spriteowl generated the classes or mixins, depending on your Syntax, according the layers and groups structure of your Sprite Psd.
+            %br
+            %br
+            <strong>Tip:</strong>
+            %br
+            Don't forget to download the #{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'}
+            %br
+            %br
+
+      .col-sm-6
+        .teaserImg
+          %img{src: "assets/img/content/spriteowl-extension.png"}
 
     .row
-      .box
+      .col-sm-6
         .nr
           3.
         .content
           %h3
-            Exported files
+            How to use it
           %p
-            After exporting your Psd you will find two files, a Png and a Stylesheet.
-            If you look into the Stylesheet you will see how Spriteowl generated the classes or mixins,
-            depending on your Syntax, according the layers and groups structure of your Sprite Psd.
+            Import your Stylsheet and the #{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'} into your project and position your sprite elements with the useful cssowl functions.
+            %br
+            %br
+            <strong>Here are a few examples with the Html and Preprocessor code on the right:</strong>
+            %br
+            %br
+            .codeexample
+              .example1.box
+                .pacman
+                .coffe
+                .heart
+                Example 1 - display()
+              .example2.box
+                .pacman
+                Example 2 - float-left( 10px, 0 )
+              .example3.box
+                Example 3 - after-absolute-inside( top, center )
 
-      .box
+
+
+      .col-sm-6
+
         .tabbox
-          %ul.tabnavi
+
+          %ul.nav.nav-tabs
+            %li.active.htmltab
+              %a{"data-toggle" => "tab", href: "#htmlcode"} Html
             %li
-              %a{title: "Css", href: "#tab1-contents-css"} Css
+              %a{"data-toggle" => "tab", href: "#lesscode"} Less
             %li
-              %a{title: "Less", href: "#tab1-contents-less"} Less
+              %a{"data-toggle" => "tab", href: "#sasscode"} Sass
             %li
-              %a{title: "Sass", href: "#tab1-contents-sass"} Sass
+              %a{"data-toggle" => "tab", href: "#scsscode"} Scss
             %li
-              %a{title: "Scss", href: "#tab1-contents-scss"} Scss
-            %li
-              %a{title: "Stylus", href: "#tab1-contents-stylus"} Stylus
+              %a{"data-toggle" => "tab", href: "#styluscode"} Stylus
 
-          #tab1-contents-css.code
-            = preserve do
-              -code("css") do
-                :plain
 
-                  #icon {
-                    #pacMan {
-                      @x: -1px;
-                      @y: 0;
-                      @width: 27px;
-                      @height: 30px;
-                      @src: @settingsSeperator;
+          .tab-content
+            #htmlcode.tab-pane.active.code
+              = preserve do
+                -code("html") do
+                  :plain
 
-                      .display() {
-                        #cssowl > #sprite > .display(@x, @y, @width, @height, @src);
-                      }
-                    }
-                    #coffe {
-                      @x: -2px;
-                      @y: -46px;
-                      @width: 30px;
-                      @height: 19px;
-                      @src: @settingsSeperator;
+                    <div class="codeexample">
 
-                      .display() {
-                        #cssowl > #sprite > .display(@x, @y, @width, @height, @src);
-                      }
-                    }
-                  }
-                  #logo {
-                    #heart {
-                      @x: 0;
-                      @y: -81px;
-                      @width: 30px;
-                      @height: 29px;
-                      @src: @settingsSeperator;
+                      <div class="example1 box">
+                        <div class="pacman"></div>
+                        <div class="coffe"></div>
+                        <div class="heart"></div>
+                        Example 1 - display()
+                      </div>
 
-                      .display() {
-                        #cssowl > #sprite > .display(@x, @y, @width, @height, @src);
-                      }
-                    }
-                  }
+                      <div class="example2 box">
+                        <div class="pacman"></div>
+                        Example 2 - float-left( 10px, 0 )
+                      </div>
 
-          #tab1-contents-less
-            sersless
+                      <div class="example3 box">
+                        Example 3 - after-absolute-inside( top, center )
+                      </div>
 
-          #tab1-contents-sass
-            sersless
 
-          #tab1-contents-scss
-            = preserve do
-              -code("scss") do
-                :plain
-                  @settingsSeperator: url("settingsSeperator.png");
+            #lesscode.tab-pane.code
+              = preserve do
+                -code("less") do
+                  :plain
 
-                  #icon {
-                    #pacMan {
-                      @x: -1px;
-                      @y: 0;
-                      @width: 27px;
-                      @height: 30px;
-                      @src: @settingsSeperator;
-
-                      .display() {
-                        #cssowl > #sprite > .display(@x, @y, @width, @height, @src);
-                      }
-                    }
-                    #coffe {
-                      @x: -2px;
-                      @y: -46px;
-                      @width: 30px;
-                      @height: 19px;
-                      @src: @settingsSeperator;
-
-                      .display() {
-                        #cssowl > #sprite > .display(@x, @y, @width, @height, @src);
-                      }
-                    }
-                  }
-                  #logo {
-                    #heart {
-                      @x: 0;
-                      @y: -81px;
-                      @width: 30px;
-                      @height: 29px;
-                      @src: @settingsSeperator;
-
-                      .display() {
-                        #cssowl > #sprite > .display(@x, @y, @width, @height, @src);
-                      }
-                    }
-                  }
-
-          #tab1-contents-stylus
-            serssass
+                    asdf
 
 
 
-    .row
-      .box
-        .nr
-          4.
-        .content
-          %h3
-            Examples how to use it
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
-      .box.code
-        %pre.prettyprint.lang-css
-          = preserve do
-            :escaped
-              <div id="coffe">Kaffe</div>
+
+            #sasscode.tab-pane.code
+              = preserve do
+                -code("sass") do
+                  :plain
+
+                    .codeexample
+
+                      .box
+                        padding: 10px
+                        margin: 20px 0
+
+                      .example1
+                        >.pacman
+                          @include examplesprite-icon-pacMan-display-inline()
+                        >.coffe
+                          @include examplesprite-icon-coffe-display-inline()
+                        >.heart
+                          @include examplesprite-logo-heart-display-inline()
+
+                      .example2
+                        >.pacman
+                          @include examplesprite-icon-pacMan-float-left(10px,0)
+
+                      .example3
+                        text-align: center
+                        padding-top: 25px
+                        @include examplesprite-icon-coffe-after-absolute-inside(top, center)
 
 
+
+            #scsscode.tab-pane.code
+              = preserve do
+                -code("scss") do
+                  :plain
+
+                    asdf
+
+
+
+            #styluscode.tab-pane.code
+              = preserve do
+                -code("stylus") do
+                  :plain
+
+                    asdf
 

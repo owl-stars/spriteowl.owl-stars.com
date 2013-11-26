@@ -3,62 +3,86 @@ title: Home
 description:
 ---
 
-
-%header.home
-  = partial "partial/head"
-
-  #cinema
-    .wrapper
-      .box
-        %p.subtitle Save time, work faster
+.section.cinema.home
+  .container
+    .row
+      .col-sm-6.col-xs-12.info
+        %p.subtitle Save time, work faster!
         %h2.title Export your Photoshop Sprites to Png and Css, Less, Sass/Scss or Stylus Code
         = partial "partial/buybutton"
 
-      .box.cinemaImg
-        %img{src: "assets/img/cinema/spriteowl-extension-colors.png"}
+      .col-sm-6.preview.hidden-xs
+        %img.img-responsive{src: "assets/img/cinema/spriteowl-extension-colors.png"}
 
-.section
-  .wrapper.howto
-    %h2 What Spriteowl does
+.section.howto
+  .container
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2.intro
+        %h2.introTitle What Spriteowl does
 
-    %p.introText
-      <strong>Spriteowl is a Photoshop Extension</strong> that takes over the boring part when working with <strong>#{link_to 'Sprites', 'http://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29#Sprites_by_CSS', :target => '_blank'}</strong> and <strong>Css</strong>.
-      For more details on how can save you a lot of time, check out the <strong>#{link_to 'Documentation', '/documentation.html'}</strong>.
+        %p.introText
+          <strong>Spriteowl is a Photoshop Extension</strong> that takes over the boring part when working with <strong>#{link_to 'Sprites', 'http://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29#Sprites_by_CSS', :target => '_blank'}</strong> and <strong>Css</strong>.
+          For more details on how Spriteowl can save you a lot of time, check out the <strong>#{link_to 'Documentation', '/documentation.html'}</strong>.
 
-    .box
-      %img.teaserImg{src: "assets/img/content/how1.png"}
-      %h3.title Photoshop
-      %p.content Place your elements and name your groups and layers
+    .row
+      .col-sm-4
+        .box
+          .arrow
+          %img.teaserImg{src: "assets/img/content/howto/how1.png"}
+          %h3.title Photoshop
+          %p.content Place your elements and name your groups and layers in our Photoshop file.
 
-    .box.arrows
-      %img.teaserImg{src: "assets/img/content/how2.png"}
-      %h3.title Spriteowl
-      %p.content Choose your export options and let the magic happen!
 
-    .box.last
-      %img.teaserImg{src: "assets/img/content/how3.png"}
-      %h3.title Css/Less/Sass/Stylus + Png
-      %p.content Import the generated Code + Png file into your project
+      .col-sm-4
+        .box
+          .arrow
+          %img.teaserImg{src: "assets/img/content/howto/yes-how2-magic.png"}
+          %h3.title Spriteowl
+          %p.content Choose your export options in the Spriteowl Photoshop Extension and let the magic happen!
 
-.section.bgDark
-  .wrapper.features
-    %h2 Spriteowl features
+      .col-sm-4
+        .box
+          %img.teaserImg{src: "assets/img/content/howto/yes-how3.png"}
+          %h3.title Css, Less, Sass/Scss, Stylus + Png
+          %p.content Import the generated Code + Png file into your project.
 
-    .box.icon-heart
-      %h3.title Save time
-      %p.content Spriteowl retrieves all sprite element's x, y, widths and heights for you
+.section.bgDark.features
+  .container
+    .row
+      .col-sm-12
+        .col-xs-12.col-md-8.col-md-offset-2.intro
+          %h2.introTitle Spriteowl Features
 
-    .box.icon-code
-      %h3.title Preprocessor Support
-      %p.content Spriteowl works with Less, Sass/Scss or Stylus
+    .row
+      .col-sm-6
+        .box.icon-clock
+          %h3.title Save time
+          %p.content Spriteowl retrieves <strong>all sprite element's x, y, widths and heights</strong> for you. <strong>No more boring measurement!</strong>
 
-    .box.icon-settings.last
-      %h3.title Handy Mixins
-      %p.content Get mixins from the #{link_to 'Cssowl Sprite Package', 'http://cssowl.owl-stars.com' } for each layer
+      .col-sm-6
+        .box.icon-code
+          %h3.title Preprocessor support
+          %p.content Spriteowl works with <strong>Less, Sass/Scss or Stylus</strong>
 
-    .box.icon-ps
-      %h3.title Platform support
-      %p.content Spriteowl works on Mac & Windows for Photoshop CS6 & CC
+      .col-sm-6
+        .box.icon-arrange
+          %h3.title Namespaces support
+          %p.content Name your Groups and Layers and <strong>be no longer worry about position changes</strong> of your sprite elements
+
+      .col-sm-6
+        .box.icon-heart
+          %h3.title Handy Mixins
+          %p.content Get handy functions to positioning your elements from the <strong>#{link_to 'Cssowl Sprite Package', 'http://cssowl.owl-stars.com' }</strong>
+
+      .col-sm-6
+        .box.icon-ps
+          %h3.title Platform support
+          %p.content Spriteowl works on <strong>Mac & Windows</strong> for <strong>Photoshop CS6 & CC</strong>
+
+      .col-sm-6
+        .box.icon-display
+          %h3.title Retina support
+          %p.content Coming soon...
 
 
 

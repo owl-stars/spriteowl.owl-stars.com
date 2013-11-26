@@ -3,121 +3,116 @@ title: Installation & FAQ
 ---
 
 
-%header.help
-  = partial "partial/head"
-
-  #cinema
-    .wrapper
-      %h2.title Spriteowl Help
+.section.cinema
+  .container
+    .col-xs-12.info
+      %h2.title Spriteowl help
 
 
-.section
-  .wrapper.install
-    %h2 How to install Spriteowl
 
-    %p.introText
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+.section.install
+  .container
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1.intro
+        %h2 How to install Spriteowl
 
-    %ul
-      %ol
-        %li
-          %p
-            Buy Spriteowl for just
-            %strong
-              $15
-              %a{title: "Buy Spriteowl", href: "buy.html"}
-                here.
-        %li
-          %p
-            Receive the Download link and
-            %strong
-              download
-            and
-            %strong
-              unzip
-            Spriteowl.
-        %li
-          %p
-            Launch the Adobe
-            %strong
-              Extension Manager.
-            %br
-            Windows Users: You may need to run the Adobe Extension Manager as Administrator (right-click the Adobe Extension Manager icon and click “Run as Administrator”).
-        %li
-          %p
-            %strong
-              Click Install
-            and navigate to the Spriteowl extension file (.zxp).
-            %br
-              %strong
-                Click OK.
-        %li
-          %p
-            You should now be able to find Spriteowl at
-            %strong
-              Window
-            >
-            %strong
-              Extensions
-            >
-            %strong
-              Spriteowl
+        %p.introText
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
 
-    .teaserImg
-      %img{src: "assets/img/content/owls/tree-owl.png"}
+    .row
+      .col-sm-7
+        %ul
+          %ol
+            %li
+              %p
+                First of all buy Spriteowl for just <strong>$15</strong> safely via Paypal #{link_to 'here', 'html://', :target => '_blank'}.
+            %li
+              %p
+                After purchasing you will receive the download link. Download Spriteowl and unzip the file.
+            %li
+              %p
+                Launch the <strong>Adobe Extension Manager</strong> (Be sure to open the right Version of Adobe Extension Manager CS6 or CC)
+                %br
+                <strong>Windows Users:</strong> You may need to run the Adobe Extension Manager as Administrator (Right-click the Adobe Extension Manager icon and click “Run as Administrator”).
+            %li
+              %p
+                In the Adobe Extension Manager click "Install" an choose the Spriteowl extension file (.zxp) then Click "Ok" or "Open".
+            %li
+              %p
+                You should now be able to find Spriteowl in Adobe Photoshop at
+                %br
+                <strong>Window > Extensions > Spriteowl</strong>.
+
+      .col-sm-5
+        .teaserImg
+          %img{src: "assets/img/content/owls/tree-owl.png"}
 
 
-.section.bgDark
-  .wrapper.faq
-    %h2 Here are answers to some questions about Spriteowl
+.section.bgDark.faq
+  .container
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1.intro
+        %h2 Frequently asked questions
 
-    %p.introText
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        %p.introText
+          Here are answers to some common questions about Spriteowl
 
-    .box.expandBox
-      %h3.title
-        What do I get for my money?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+    .row
+      .col-xs-12
+        .box.expandBox
+          %h3.title
+            The installation of Spriteowl has failed. I get an error from the Adobe Extension manager!
+          .content
+            %ul
+              %li
+                Be sure you have opend the right Adobe Extension Manager! For the CC Photoshop Extension you will need the Adobe Extension Manager CC!
+              %li
+                Close Photoshop before you install the Extension with the Adobe Extension Manager
 
-    .box.expandBox
-      %h3.title
-        What can Spriteowl do?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            How can I get Spriteowl updates?
+          .content
+            We are still working on Spriteowl and if we release a new update, we will send you a download link to the purchase e-mail you given us.
 
-    .box.expandBox
-      %h3.title
-        I want to see how it works before I buy.
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            What do I get for my money?
+          .content
+            %ul
+              %li
+                You will get the Spriteowl Photoshop extension Win and Mac for Photoshop CS6 and CC
+              %li
+                A License for all your personal Computers
+              %li
+                Free updates and bug fixes
 
-    .box.expandBox
-      %h3.title
-        Do I have to buy OS X and Windows version separately?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            What can Spriteowl do?
+          .content
+            Spriteowl can save you a lot of time while working with Css Sprite files.
 
-    .box.expandBox
-      %h3.title
-        Why only a CS6 version?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            I lost my download link. Can you resend it to me?
+          .content
+            Please send us your purchase e-mail to #{mail_to 'support@owl-stars.com', 'support@owl-stars.com'} and we will send you your download link as soon as possible.
 
-    .box.expandBox
-      %h3.title
-        I lost my download link. Can you resend it to me?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            Can I suggest features?
+          .content
+            Please send your suggestion to #{mail_to 'support@owl-stars.com', 'support@owl-stars.com'}. We love suggestions!
 
-    .box.expandBox
-      %h3.title
-        Can I suggest features?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            I found a bug. How can I tell you?
+          .content
+            Please send a bug description to #{mail_to 'support@owl-stars.com', 'support@owl-stars.com'} and we will fix it as soon as possible.
 
-    .box.expandBox
-      %h3.title
-        I found a bug. How can I tell you?
-      %p.content
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
+        .box.expandBox
+          %h3.title
+            Who is behind Spriteowl
+          .content
+            Behind Spriteowl and all Owl-Star products is #{link_to 'We Just Do Stuff', 'html://www.wejustdostuff.com', :target => '_blank'}. Check us out!

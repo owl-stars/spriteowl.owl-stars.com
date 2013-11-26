@@ -1,24 +1,37 @@
-#topbar
-  .wrapper
-    %ul.sitenavi
-      %li
-        %a{title: "Owl-Stars", href: "http://www.owl-stars.com"}
-          .home Owl-Stars
-      %li.active
-        %a{title: "Spriteowl", href: "http://spriteowl.owl-stars.com"} Spriteowl
-      %li
-        %a{title: "Cssowl", href: "http://cssowl.owl-stars.com"} Cssowl
+.navbar.navbar-default{role:"navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
 
-    .madeby
-      Spriteowl is made by
-      %a{title: "We Are Interactive", href: "http://www.weareinteractive.com", class: "wjds"} We Are Interactive
+      %a.navbar-brand.logo{title: "Spriteowl", href: "/"}
+        %h1.hidden-sm Spriteowl
+        %h2.hidden-xs.hidden-sm Photoshop Extension
 
-#head
-  .wrapper
-    %h1.logo Spriteowl - Photoshop Extension
+    %nav.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if (current_page.data.title == 'Home')
+          %li.active
+            %a{title: "Home", href: "index.html"} Home
+        - else
+          %li
+            %a{title: "Home", href: "index.html"} Home
 
-    = partial "partial/buybutton"
+        - if (current_page.data.title == 'Documentation')
+          %li.active
+            %a{title: "Documentation", href: "documentation.html"} Documentation
+        -else
+          %li
+            %a{title: "Documentation", href: "documentation.html"} Documentation
 
-#navigation
-  .wrapper
-    = partial "partial/navigation"
+        - if (current_page.data.title == 'Installation & FAQ')
+          %li.active
+            %a{title: "Installation & FAQ", href: "installation-faq.html"} Installation & FAQ
+        -else
+          %li
+            %a{title: "Installation & FAQ", href: "installation-faq.html"} Installation & FAQ
+        %li
+          %a.buy{title: "How to", href: "http://spriteowl.fetchapp.com/sell/oophapee"} Buy Spriteowl
