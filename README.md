@@ -96,4 +96,4 @@ $ rake deploy
 ```
 
 ## License
-Copyright (c) 2013 We Just Do Stuff.
+Copyright (c) 2013 Owl-Stars.
