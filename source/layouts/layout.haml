@@ -8,6 +8,7 @@
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "width=device-width", :name => "viewport"}
     %title= page_title
+    %meta{:content => data.site.version, :name => "version"}
     %meta{:content => page_description, :name => "description"}
     %link{ rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon-144x144-precomposed.png" }
     %link{ rel: "apple-touch-icon", sizes: "120x120", href: "/apple-touch-icon-120x120-precomposed.png" }
@@ -19,35 +20,23 @@
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
     = javascript_include_tag "modernizr"
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "all"
-
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23550216-4']);
-      _gaq.push(['_gat._anonymizeIp', true]);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "site"
+    = google_analytics_tag
 
   %body{:class => page_classes}
 
     %header
-      = partial "partial/topbar"
-      = partial "partial/head"
-
+      = partial "partials/topbar"
+      = partial "partials/head"
 
     #main
       = yield
-
 
     %footer
       .container
         .row
           .col-sm-6.col-md-7.col-xs-12.buy
-            = partial "partial/buybutton"
+            = partial "partials/buybutton"
             .title.hidden-xs.hidden-sm
               Save time, work faster!
 
@@ -55,7 +44,7 @@
             .title
               Never miss an update again!
             %form#mailchimpform
-              %input#mc-email{placeholder: "Your E-Mail adress", type: "email"}
+              %input#mc-email{placeholder: "Your E-Mail address", type: "email"}
               %button{type: "submit"} Subscribe
               %br
               %label{for: "mc-email"}

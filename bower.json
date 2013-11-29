@@ -1,14 +1,13 @@
 {
-  "name": "spriteowl",
   "private": true,
+  "name": "middleman-site-spriteowl",
   "dependencies": {
     "jquery": "~1.9.1",
+    "cssowl": "~1.0.6",
     "easytabs": "latest",
-    "ajaxchimp": "latest",
+    "ajaxchimp": "~1.0.2",
     "modernizr": "~2.6.2",
     "flexslider": "latest",
-    "normalize-css": "~2.1.0",
-    "cssowl": "~1.0.8",
     "sass-bootstrap": "~3.0.1"
   }
 }

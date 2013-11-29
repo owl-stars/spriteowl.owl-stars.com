@@ -1,0 +1,44 @@
+body
+  color: $colorFontDefault
+  font-size: $fontSizeBase
+  background: $colorBgDefault
+  @include fontDefaultRegular
+
+a
+  @include transition
+  outline: none
+  color: $colorFontDefault
+  text-decoration: underline
+
+  &:active
+    outline: none
+  &:focus
+    -moz-outline-style: none
+  &:hover
+    color: $colorFontGrey
+
+\:-moz-any-link:focus
+  outline: none
+
+h1, h2, h3, h4, .big
+  @include fontSpecialRegular
+
+h1, h2
+  font-size: $fontSizeSuperBig
+
+h3
+  font-size: $fontSizeTitle
+
+h4, .big
+  font-size: $fontSizeTitle
+
+p
+  margin: 0
+  line-height: 21px
+
+input, button
+  height: 28px
+  padding: 0 8px
+  box-shadow: none
+  border: 1px solid $colorBorder
+  +border-radius($cornerRaduis)

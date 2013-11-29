@@ -7,24 +7,22 @@ title: Documentation
     .col-xs-12.info
       %h2.title Spriteowl explained
 
-
-
 .section.benefits
   .container
     .row
       .col-xs-12.col-md-10.col-md-offset-1.intro
-        %h2 The Benefits in detail
+        %h2 The benefits in detail
 
         %p.introText
-          Writing Css code for a Sprite image can be quite a <strong>time consuming job as you always need to measure or look up each element's the x, y, width and height</strong>. And if elements change you need to go through your whole code to see where it needs to be updated.
-          Wouldn't it be great if you could just forget about this and let it someone else handle it? <strong>Well, lucky you, that's where the Spriteowl comes in.</strong>
+          Writing Css code for a Sprite Image can be a quite <strong>time consuming job as you always need to measure or look up each element's x, y, width and height</strong>. And if elements change, you need to go through your whole code to see where it needs to be updated.
+          Wouldn't it be great if you could just forget about all this and let it someone else handle it? <strong>Well, lucky you, that's where Spriteowl comes in.</strong>
 
     .row
       .col-sm-4
         %h3.title
           What you get
         %p.content
-          With Spriteowl you will not just get an <strong>optimized Png</strong> of your Photoshop sprite file, you also get a Stylesheet in which contains each <strong>layer's position (x/y) and dimension (width/height)</strong>.
+          With Spriteowl you will not just get an <strong>optimized Png</strong> of your Photoshop Sprite File, you also get a Stylesheet which contains each <strong>Layer's position (x/y) and dimension (width/height)</strong>.
 
       .col-sm-4
         %h3.title
@@ -37,8 +35,6 @@ title: Documentation
           Namespace support
         %p.content
           Spriteowl uses namespaces for bring your sprite elements into your Html, so you be no longer worry about position changes of your sprite elements in the original Psd file.
-
-
 
 .section.bgDark.howto
   .container
@@ -61,7 +57,7 @@ title: Documentation
             .arrow
             %img.teaserImg{src: "assets/img/content/howto/no-how2.png"}
             %h3.title Export Image
-            %p.content Export the Sprite image
+            %p.content Export the Sprite Image
 
 
         .col-sm-3
@@ -69,7 +65,7 @@ title: Documentation
             .arrow
             %img.teaserImg{src: "assets/img/content/howto/no-how3-boring.png"}
             %h3.title Measure
-            %p.content Looking up each element
+            %p.content Look up each element
 
 
         .col-sm-3
@@ -89,7 +85,7 @@ title: Documentation
             .arrow
             %img.teaserImg{src: "assets/img/content/howto/how1.png"}
             %h3.title Photoshop
-            %p.content Place your elements and name your groups and layers
+            %p.content Place your elements and name your Groups and Layers
 
         .col-sm-4
           .box
@@ -102,11 +98,7 @@ title: Documentation
           .box
             %img.teaserImg{src: "assets/img/content/howto/yes-how3.png"}
             %h3.title Css, Less, Sass/Scss, Stylus + Png
-            %p.content Import the generated stylesheet + Png files into your project
-
-
-
-
+            %p.content Import the generated Stylesheet + Png files into your project
 
 .section.settings
   .container
@@ -122,15 +114,18 @@ title: Documentation
       .col-sm-6
         %ul
           %li
-            .big Syntax:
+            %strong Syntax:
+            %br
             Select the output syntax. We support Css, Less, Sass/Scss and Stylus.
 
           %li
-            .big Optimize:
+            %strong Optimize:
+            %br
             Switch it on and Spriteowl will trim and posterize the output Png.
 
           %li
-            .big Export
+            %strong Export:
+            %br
             Click and choose the location where to save the Stylesheet + Png.
 
 
@@ -151,13 +146,13 @@ title: Documentation
           %h3
             Photoshop
           %p
-            Before you can export your sprite, please <strong>place your elements</strong> and <strong>name your groups and layers</strong>.
+            Before you can export your sprite, please <strong>place your elements</strong> and <strong>name your Groups and Layers</strong>.
             %br
             %br
-            <strong>Tip:</strong>
+            %strong Note:
             %br
-            You need at least one top level group as Spriteowl will export each top level group as a separate sprite.
-            Groups and layers should be named according to class names in html since you will them later on in your Stylesheet.
+            You'll need at least one top level Group as Spriteowl will export each top level Group as a separate Sprite.
+            Groups and Layers should be named according to class names in html since you will use them later on in your Stylesheet.
             %br
             %br
 
@@ -176,13 +171,13 @@ title: Documentation
             Now its time to export your Psd.
             %br
             %br
-            Choose your "<strong>Syntax</strong>", whether you want to "<strong>Optimize</strong>" the Png or not and then click "<strong>Export</strong>" and choose a destination folder.
+            Choose your "<strong>Syntax</strong>", whether you want to "<strong>Optimize</strong>" the Png or not, click "<strong>Export</strong>" and choose a destination folder.
             %br
-            After exporting your Psd you will find two files, a Png and a Stylesheet.
-            If you look into the Stylesheet you will see how Spriteowl generated the classes or mixins, depending on your Syntax, according the layers and groups structure of your Sprite Psd.
+            After the export you'll find two files: a Png and a Stylesheet.
+            If you look into the Stylesheet you will see how Spriteowl generated the classes and mixins depending on your Syntax and according to the Layer and Group structure of your Sprite Psd.
             %br
             %br
-            <strong>Tip:</strong>
+            %strong Note:
             %br
             Don't forget to download the #{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'}
             %br
@@ -200,7 +195,7 @@ title: Documentation
           %h3
             How to use it
           %p
-            Import your Stylsheet and the #{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'} into your project and position your sprite elements with the useful cssowl functions.
+            Import your Stylsheet and the #{link_to 'Cssowl\'s Sprite Package', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'} into your project and position your Sprite Elements with the Cssowl mixins.
             %br
             %br
             <strong>Here are a few examples with the Html and Preprocessor code on the right:</strong>
@@ -217,8 +212,6 @@ title: Documentation
                 Example 2 - float-left( 10px, 0 )
               .example3.box
                 Example 3 - after-absolute-inside( top, center )
-
-
 
       .col-sm-6
 
@@ -269,9 +262,6 @@ title: Documentation
 
                     asdf
 
-
-
-
             #sasscode.tab-pane.code
               = preserve do
                 -code("sass") do
@@ -300,15 +290,12 @@ title: Documentation
                         padding-top: 25px
                         @include examplesprite-icon-coffe-after-absolute-inside(top, center)
 
-
-
             #scsscode.tab-pane.code
               = preserve do
                 -code("scss") do
                   :plain
 
                     asdf
-
 
 
             #styluscode.tab-pane.code
