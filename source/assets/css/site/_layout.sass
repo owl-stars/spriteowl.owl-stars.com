@@ -156,6 +156,7 @@ header
 
     nav
       background: $colorBgDefault
+      padding-bottom: 30px
 
       .nav
         margin: 0
@@ -213,7 +214,6 @@ header
 
     a
       color: $colorFontSpriteowl
-      font-weight: bold
       &:hover
         color: $colorFontDefault
 
@@ -306,23 +306,15 @@ header
           margin: 10px 20px 20px 65px
 
 
-
     &.howto
 
-      .no-spriteowl
-        color: $colorFontGreyDark
-
-      .yes-spriteowl
-        margin-top: 30px
-        border-top: 1px dashed $colorBorder
-
-        h2
-          font-size: $fontSizeMegaBig
-
       .row
-
-        >.content
-          margin-top: 30px
+        .moreinfo
+          text-align: center
+          margin-top: 50px
+          background: $colorBgLight
+          +border-radius($cornerRaduis)
+          padding: 10px 20px
 
         .box
           text-align: center
@@ -336,22 +328,71 @@ header
 
 
 
+    &.benefits
+
+      .no-spriteowl
+        color: $colorFontGreyDark
+        margin-top: 40px
+
+      .yes-spriteowl
+        margin-top: 60px
+
+      .row
+        >.content
+          margin-top: 30px
+
+        .boxinfo
+          background: $colorBgLight
+          +border-radius($cornerRaduis)
+          padding: 20px
+          margin-bottom: 20px
+
+
+          >.title
+            margin-top: 0
+
+        .box
+          text-align: center
+          margin-bottom: 70px
+
+
+          >.title
+            margin: 20px 0 10px
+
+          .arrow
+            @include sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
+
+
 
     &.settings
       .row
         .teaserImg
           text-align: center
 
-        ul
-          margin: 0
+        ul, ol
+          margin: 0 0 0 20px
           padding: 0
-          list-style: none
+          //list-style: none
 
           li
-            margin-bottom: 20px
+            @include fontSpecialRegular
+            font-size: $fontSizeBig
+            margin: 0 0 20px
 
-            > .big
-              margin-right: 5px
+            .box
+              border-left: 1px dashed $colorFontDefault
+              padding: 10px 0 0 20px
+              font-size: $fontSizeBase
+
+              h3
+                margin-top: 5px
+                margin-bottom: 10px
+                font-size: $fontSizeTitle
+
+              p
+                @include fontDefaultRegular
+                //font-size: $fontSizeBase
+
 
 
     &.example
@@ -362,7 +403,7 @@ header
           float: left
           @include fontSpecialRegular
           font-size: $fontSizeBig
-          width: 10%
+          width: 25px
 
         .content
           float: left
@@ -386,11 +427,11 @@ header
           position: relative
           margin-left: 20px
           @include fontSpecialRegular
-          font-size: $fontSizeTitle
+          font-size: $fontSizeSubTitle
 
           .box
             padding: 10px
-            background: $bgImg
+            background: $bgImgDark
             margin: 20px 0
 
           .example1
@@ -407,8 +448,9 @@ header
 
           .example3
             text-align: center
-            padding-top: 25px
-            @include examplesprite-icon-coffe-after-absolute-inside(top, center)
+            padding-top: 30px
+            @include examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
+
 
 
     &.faq
@@ -448,11 +490,11 @@ header
               margin: 3px 0
 
 
+
     &.install
 
-      ul
-        clear: both
-        margin: 0
+      ol
+        margin: 0 0 0 20px
         padding: 0
 
         li
@@ -469,7 +511,6 @@ header
       .teaserImg
         margin-top: 30px
         text-align: center
-
 
 
 
@@ -514,6 +555,8 @@ header
 
               > .user
                 margin-left: 20px
+
+
 
 // --- Footer -------------------------------------------------------------------------------------
 
@@ -564,7 +607,7 @@ footer
       margin-top: 10px
       margin-bottom: 10px
       @include fontSpecialRegular
-      font-size: $fontSizeBig
+      font-size: $fontSizeTitle
 
   .info
     border-top: 1px dashed #444444
@@ -596,7 +639,7 @@ footer
       margin-top: 10px
       margin-bottom: 0
       .title
-        margin-right: 2px
+        margin-right: 12px
 
     .info
       .twitter
@@ -613,7 +656,7 @@ footer
 
   #main
     .section
-      &.howto
+      &.benefits, &.howto
         .row
           .box
             margin-bottom: 0
@@ -626,6 +669,11 @@ footer
 @media (min-width: $screen-desktop)
   #main
     .section
+      &.benefits
+        .row
+          .boxinfo
+            min-height: 200px
+
       &.cinema
         .info
           >.subtitle
