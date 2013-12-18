@@ -6,7 +6,7 @@
 #
 # With no layout
 page "/404.html", :layout => false
-page "/updates/*.xml", :layout => false
+page "/sitemap.xml", :layout => false
 
 ###
 # Helpers
