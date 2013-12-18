@@ -40,10 +40,10 @@
   .nav-tabs
     margin: 0
     padding: 0
-    @include fontSpecialRegular
-    font-size: $fontSizeTitle
     border-bottom: 0
     list-style-type: none
+    font-size: $fontSizeTitle
+    @include fontSpecialRegular
 
     > li
       margin-right: 4px
@@ -226,7 +226,6 @@ header
         margin-bottom: 40px
 
     .code
-      height: 400px
       overflow: auto
       background: #fff
 
@@ -398,6 +397,9 @@ header
     &.example
       .row
         margin-bottom: 50px
+
+        .code
+          height: 400px
 
         .nr
           float: left

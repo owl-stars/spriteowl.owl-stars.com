@@ -24,7 +24,7 @@ title: Documentation
           %h3.title
             What you get
           %p.content
-            With Spriteowl you will not only get an optimized Png of your Photoshop sprite file, but also a stylesheet which contains <strong>each layer's position (x/y) and dimension (width/height)!</strong>
+            With Spriteowl you will not only get an optimized PNG of your Photoshop sprite file, but also a stylesheet which contains <strong>each layer's position (x/y) and dimension (width/height)!</strong>
 
       .col-sm-4
         .boxinfo
@@ -100,8 +100,8 @@ title: Documentation
         .col-sm-4
           .box
             %img.teaserImg{src: "assets/img/content/howto/yes-how3.png"}
-            %h3.title CSS, LESS, SASS/SCSS, Stylus + Png
-            %p.content Import the generated stylesheet + Png file(s) into your project
+            %h3.title CSS, LESS, SASS/SCSS, Stylus + PNG
+            %p.content Import the generated stylesheet + PNG file(s) into your project
 
 
 
@@ -112,7 +112,7 @@ title: Documentation
         %h2 The Extension
 
         %p.introText
-          This is what Spriteowl does for you: <strong>In just 3 quick'n'easy steps the extension automatically creates a stylesheet + Png file(s) directly from Photoshop!</strong>
+          This is what Spriteowl does for you: <strong>In just 3 quick'n'easy steps the extension automatically creates a stylesheet + PNG file(s) directly from Photoshop!</strong>
 
     .row
       .col-sm-6
@@ -133,14 +133,14 @@ title: Documentation
               %h3
                 Optimize:
               %p
-                Choose this option on and Spriteowl will trim and posterize the output Png.
+                Choose this option on and Spriteowl will trim and posterize the output PNG.
 
           %li
             .box
               %h3
                 Export:
               %p
-                Click and choose the location where to save the stylesheet + Png file(s).
+                Click and choose the location where to save the stylesheet + PNG file(s).
 
 
 
@@ -187,9 +187,9 @@ title: Documentation
             Now it's time to export your sprite!
             %br
             %br
-            Choose a "<strong>Syntax</strong>", decide whether you want to "<strong>Optimize</strong>" the Png or not, click "<strong>Export</strong>" and choose a destination folder.
+            Choose a "<strong>Syntax</strong>", decide whether you want to "<strong>Optimize</strong>" the PNG or not, click "<strong>Export</strong>" and choose a destination folder.
             %br
-            After the export you'll find two files in your destination folder: a Png and a stylesheet.
+            After the export you'll find two files in your destination folder: a PNG and a stylesheet.
             If you look into the stylesheet you will see that Spriteowl exactly generated the classes and mixins depending on your syntax and according to the layer and group structure of your sprite Psd.
             %br
             %br
@@ -237,11 +237,11 @@ title: Documentation
             %li.active.htmltab
               %a{"data-toggle" => "tab", href: "#htmlcode"} HTML
             %li
-              %a{"data-toggle" => "tab", href: "#lesscode"} LESS
-            %li
-              %a{"data-toggle" => "tab", href: "#sasscode"} Sass
+              %a{"data-toggle" => "tab", href: "#sasscode"} SASS
             %li
               %a{"data-toggle" => "tab", href: "#scsscode"} SCSS
+            %li
+              %a{"data-toggle" => "tab", href: "#lesscode"} LESS
             %li
               %a{"data-toggle" => "tab", href: "#styluscode"} Stylus
 
@@ -271,49 +271,12 @@ title: Documentation
                       </div>
 
 
-            #lesscode.tab-pane.code
-              = preserve do
-                -code("less") do
-                  :plain
-
-                    .codeexample {
-
-                      .box {
-                        padding: 10px
-                        margin: 20px 0
-                      }
-
-                      .example1 {
-                        .pacman {
-                          .examplesprite-icon-pacMan-display-inline()
-                        }
-                        .coffe {
-                          .examplesprite-icon-coffe-display-inline()
-                        }
-                        .heart {
-                          .examplesprite-logo-heart-display-inline()
-                        }
-                      }
-
-                      .example2 {
-                        .pacman {
-                          .examplesprite-icon-pacMan-float-left(10px,0)
-                        }
-                      }
-
-                      .example3 {
-                        text-align: center
-                        padding-top: 30px
-                        .examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
-                      }
-                    }
-
-
-
             #sasscode.tab-pane.code
               = preserve do
                 -code("sass") do
                   :plain
+                    @import "cssowl/lib/sass/cssowl"
+                    $examplesprite: url("examplesprite.png")
 
                     .codeexample
 
@@ -323,20 +286,19 @@ title: Documentation
 
                       .example1
                         .pacman
-                          @include examplesprite-icon-pacMan-display-inline()
+                          +examplesprite-icon-pacMan-display-inline()
                         .coffe
-                          @include examplesprite-icon-coffe-display-inline()
+                          +examplesprite-icon-coffe-display-inline()
                         .heart
-                          @include examplesprite-logo-heart-display-inline()
+                          +examplesprite-logo-heart-display-inline()
 
-                      .example2
-                        .pacman
-                          @include examplesprite-icon-pacMan-float-left(10px,0)
+                      .example2 .pacman
+                        +examplesprite-icon-pacMan-float-left(10px,0)
 
                       .example3
                         text-align: center
                         padding-top: 30px
-                        @include examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
+                        +examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
 
 
 
@@ -344,44 +306,83 @@ title: Documentation
               = preserve do
                 -code("scss") do
                   :plain
+                    @import "cssowl/lib/scss/cssowl";
+                    $examplesprite: url("examplesprite.png");
 
                     .codeexample {
 
                       .box {
-                        padding: 10px
-                        margin: 20px 0
+                        padding: 10px;
+                        margin: 20px 0;
                       }
 
                       .example1 {
                         .pacman {
-                          @include examplesprite-icon-pacMan-display-inline()
+                          @include examplesprite-icon-pacMan-display-inline();
                         }
                         .coffe {
-                          @include examplesprite-icon-coffe-display-inline()
+                          @include examplesprite-icon-coffe-display-inline();
                         }
                         .heart {
-                          @include examplesprite-logo-heart-display-inline()
+                          @include examplesprite-logo-heart-display-inline();
                         }
                       }
 
-                      .example2 {
-                        .pacman {
-                          @include examplesprite-icon-pacMan-float-left(10px,0)
-                        }
+                      .example2 .pacman {
+                        @include examplesprite-icon-pacMan-float-left(10px,0);
                       }
 
                       .example3 {
-                        text-align: center
-                        padding-top: 30px
-                        @include examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
+                        padding-top: 30px;
+                        text-align: center;
+                        @include examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px);
                       }
                     }
 
+
+            #lesscode.tab-pane.code
+              = preserve do
+                -code("less") do
+                  :plain
+                    @import "cssowl/lib/less/cssowl";
+                    @examplesprite: url("examplesprite.png");
+
+                    .codeexample {
+
+                      .box {
+                        padding: 10px;
+                        margin: 20px 0;
+                      }
+
+                      .example1 {
+                        .pacman {
+                          .examplesprite-icon-pacMan-display-inline();
+                        }
+                        .coffe {
+                          .examplesprite-icon-coffe-display-inline();
+                        }
+                        .heart {
+                          .examplesprite-logo-heart-display-inline();
+                        }
+                      }
+
+                      .example2 .pacman {
+                        .examplesprite-icon-pacMan-float-left(10px, 0);
+                      }
+
+                      .example3 {
+                        padding-top: 30px;
+                        text-align: center;
+                        .examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px);
+                      }
+                    }
 
             #styluscode.tab-pane.code
               = preserve do
                 -code("stylus") do
                   :plain
+                    @import "cssowl/lib/styl/cssowl"
+                    examplesprite: url("examplesprite.png")
 
                     .codeexample
 
@@ -406,3 +407,236 @@ title: Documentation
                         padding-top: 30px
                         examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
 
+.section.bgDark.mixins
+  .container
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2.intro
+        %h2 Variables
+
+        %p.introText
+          Each layer exposes its <strong>x</strong>, <strong>y</strong>, <strong>width</strong>, <strong>height</strong> and <strong>src</strong> as variables.
+
+    .row
+      .col-sm-12
+
+        .tabbox
+
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", href: "#sassvars"} SASS
+            %li
+              %a{"data-toggle" => "tab", href: "#scssvars"} SCSS
+            %li
+              %a{"data-toggle" => "tab", href: "#lessvars"} LESS
+            %li
+              %a{"data-toggle" => "tab", href: "#stylusvars"} Stylus
+
+          .tab-content
+
+            #sassvars.tab-pane.code.active
+              = preserve do
+                -code("sass") do
+                  :plain
+                    $examplesprite-icon-pacMan-x: -11px
+                    $examplesprite-icon-pacMan-y: -10px
+                    $examplesprite-icon-pacMan-width: 27px
+                    $examplesprite-icon-pacMan-height: 30px
+                    $examplesprite-icon-pacMan-src: $examplesprite
+
+            #scssvars.tab-pane.code
+              = preserve do
+                -code("scss") do
+                  :plain
+                    $examplesprite-icon-pacMan-x: -11px;
+                    $examplesprite-icon-pacMan-y: -10px;
+                    $examplesprite-icon-pacMan-width: 27px;
+                    $examplesprite-icon-pacMan-height: 30px;
+                    $examplesprite-icon-pacMan-src: $examplesprite;
+
+            #lessvars.tab-pane.code
+              = preserve do
+                -code("less") do
+                  :plain
+                    @examplesprite-icon-pacMan-x: -11px;
+                    @examplesprite-icon-pacMan-y: -10px;
+                    @examplesprite-icon-pacMan-width: 27px;
+                    @examplesprite-icon-pacMan-height: 30px;
+                    @examplesprite-icon-pacMan-src: @examplesprite;
+
+            #stylusvars.tab-pane.code
+              = preserve do
+                -code("styl") do
+                  :plain
+                    examplesprite-icon-pacMan-x = -11px
+                    examplesprite-icon-pacMan-y = -10px
+                    examplesprite-icon-pacMan-width = 27px
+                    examplesprite-icon-pacMan-height = 30px
+                    examplesprite-icon-pacMan-src = examplesprite
+
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2.intro
+        %h2 Mixins
+
+        %p.introText
+          In addition to it's variables, each layer includes the Cssowl sprite mixins. For more details and examples check out the #{link_to 'documentation', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'}.
+
+    .row
+      .col-sm-12
+
+        .tabbox
+
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", href: "#sassmixins"} SASS
+            %li
+              %a{"data-toggle" => "tab", href: "#scssmixins"} SCSS
+            %li
+              %a{"data-toggle" => "tab", href: "#lessmixins"} LESS
+            %li
+              %a{"data-toggle" => "tab", href: "#stylusmixins"} Stylus
+
+          .tab-content
+            #sassmixins.tab-pane.code.active
+              = preserve do
+                -code("sass") do
+                  :plain
+                    // position
+                    @mixin examplesprite-icon-pacMan-position() ...
+                    // absolute
+                    @mixin examplesprite-icon-pacMan-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-absolute(@top:none, @right:none, @bottom:none, @left:none) ...
+                    // after
+                    @mixin examplesprite-icon-pacMan-after-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-after-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-after-absolute(@top:none, @right:none, @bottom:none, @left:none) ...
+                    @mixin examplesprite-icon-pacMan-after-float(@xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-after-inline(@xOffset:0, @yOffset:0, @valign:middle) ...
+                    @mixin examplesprite-icon-pacMan-after() ...
+                    // before
+                    @mixin examplesprite-icon-pacMan-before-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-before-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-before-absolute(@top:none, @right:none, @bottom:none, @left:none) ...
+                    @mixin examplesprite-icon-pacMan-before-float(@xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-before-inline(@xOffset:0, @yOffset:0, @valign:middle) ...
+                    @mixin examplesprite-icon-pacMan-before() ...
+                    // display
+                    @mixin examplesprite-icon-pacMan-display-block() ...
+                    @mixin examplesprite-icon-pacMan-display-inline(@yOffset:0, @valign:middle) ...
+                    @mixin examplesprite-icon-pacMan-display() ...
+                    // float
+                    @mixin examplesprite-icon-pacMan-float-left(@xOffset:0, @yOffset:0) ...
+                    @mixin examplesprite-icon-pacMan-float-right(@xOffset:0, @yOffset:0) ...
+                    // replace
+                    @mixin examplesprite-icon-pacMan-replace-block() ...
+                    @mixin examplesprite-icon-pacMan-replace-inline(@yOffset:0, @valign:middle) ...
+                    @mixin examplesprite-icon-pacMan-replace() ...
+
+            #scssmixins.tab-pane.code
+              = preserve do
+                -code("scss") do
+                  :plain
+                    // position
+                    @mixin examplesprite-icon-pacMan-position() { ... }
+                    // absolute
+                    @mixin examplesprite-icon-pacMan-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-absolute(@top:none, @right:none, @bottom:none, @left:none) { ... }
+                    // after
+                    @mixin examplesprite-icon-pacMan-after-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-after-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-after-absolute(@top:none, @right:none, @bottom:none, @left:none) { ... }
+                    @mixin examplesprite-icon-pacMan-after-float(@xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-after-inline(@xOffset:0, @yOffset:0, @valign:middle) { ... }
+                    @mixin examplesprite-icon-pacMan-after() { ... }
+                    // before
+                    @mixin examplesprite-icon-pacMan-before-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-before-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-before-absolute(@top:none, @right:none, @bottom:none, @left:none) { ... }
+                    @mixin examplesprite-icon-pacMan-before-float(@xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-before-inline(@xOffset:0, @yOffset:0, @valign:middle) { ... }
+                    @mixin examplesprite-icon-pacMan-before() { ... }
+                    // display
+                    @mixin examplesprite-icon-pacMan-display-block() { ... }
+                    @mixin examplesprite-icon-pacMan-display-inline(@yOffset:0, @valign:middle) { ... }
+                    @mixin examplesprite-icon-pacMan-display() { ... }
+                    // float
+                    @mixin examplesprite-icon-pacMan-float-left(@xOffset:0, @yOffset:0) { ... }
+                    @mixin examplesprite-icon-pacMan-float-right(@xOffset:0, @yOffset:0) { ... }
+                    // replace
+                    @mixin examplesprite-icon-pacMan-replace-block() { ... }
+                    @mixin examplesprite-icon-pacMan-replace-inline(@yOffset:0, @valign:middle) { ... }
+                    @mixin examplesprite-icon-pacMan-replace() { ... }
+
+            #lessmixins.tab-pane.code
+              = preserve do
+                -code("less") do
+                  :plain
+                    // position
+                    .examplesprite-icon-pacMan-position() { ... }
+                    // absolute
+                    .examplesprite-icon-pacMan-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-absolute(@top:none, @right:none, @bottom:none, @left:none) { ... }
+                    // after
+                    .examplesprite-icon-pacMan-after-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-after-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-after-absolute(@top:none, @right:none, @bottom:none, @left:none) { ... }
+                    .examplesprite-icon-pacMan-after-float(@xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-after-inline(@xOffset:0, @yOffset:0, @valign:middle) { ... }
+                    .examplesprite-icon-pacMan-after() { ... }
+                    // before
+                    .examplesprite-icon-pacMan-before-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-before-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-before-absolute(@top:none, @right:none, @bottom:none, @left:none) { ... }
+                    .examplesprite-icon-pacMan-before-float(@xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-before-inline(@xOffset:0, @yOffset:0, @valign:middle) { ... }
+                    .examplesprite-icon-pacMan-before() { ... }
+                    // display
+                    .examplesprite-icon-pacMan-display-block() { ... }
+                    .examplesprite-icon-pacMan-display-inline(@yOffset:0, @valign:middle) { ... }
+                    .examplesprite-icon-pacMan-display() { ... }
+                    // float
+                    .examplesprite-icon-pacMan-float-left(@xOffset:0, @yOffset:0) { ... }
+                    .examplesprite-icon-pacMan-float-right(@xOffset:0, @yOffset:0) { ... }
+                    // replace
+                    .examplesprite-icon-pacMan-replace-block() { ... }
+                    .examplesprite-icon-pacMan-replace-inline(@yOffset:0, @valign:middle) { ... }
+                    .examplesprite-icon-pacMan-replace() { ... }
+
+
+            #stylusmixins.tab-pane.code
+              = preserve do
+                -code("styl") do
+                  :plain
+                    // position
+                    examplesprite-icon-pacMan-position() ...
+                    // absolute
+                    examplesprite-icon-pacMan-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-absolute(@top:none, @right:none, @bottom:none, @left:none) ...
+                    // after
+                    examplesprite-icon-pacMan-after-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-after-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-after-absolute(@top:none, @right:none, @bottom:none, @left:none) ...
+                    examplesprite-icon-pacMan-after-float(@xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-after-inline(@xOffset:0, @yOffset:0, @valign:middle) ...
+                    examplesprite-icon-pacMan-after() ...
+                    // before
+                    examplesprite-icon-pacMan-before-absolute-inside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-before-absolute-outside(@valign:top, @halign:left, @xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-before-absolute(@top:none, @right:none, @bottom:none, @left:none) ...
+                    examplesprite-icon-pacMan-before-float(@xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-before-inline(@xOffset:0, @yOffset:0, @valign:middle) ...
+                    examplesprite-icon-pacMan-before() ...
+                    // display
+                    examplesprite-icon-pacMan-display-block() ...
+                    examplesprite-icon-pacMan-display-inline(@yOffset:0, @valign:middle) ...
+                    examplesprite-icon-pacMan-display() ...
+                    // float
+                    examplesprite-icon-pacMan-float-left(@xOffset:0, @yOffset:0) ...
+                    examplesprite-icon-pacMan-float-right(@xOffset:0, @yOffset:0) ...
+                    // replace
+                    examplesprite-icon-pacMan-replace-block() ...
+                    examplesprite-icon-pacMan-replace-inline(@yOffset:0, @valign:middle) ...
+                    examplesprite-icon-pacMan-replace() ...
