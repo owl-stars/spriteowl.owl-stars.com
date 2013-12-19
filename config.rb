@@ -22,8 +22,10 @@ activate :syntax, :line_numbers => false
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :rsync
+  deploy.clean  = true
   deploy.host   = "spriteowl.owl-stars.com"
   deploy.path   = "/var/www/spriteowl.owl-stars.com/htdocs"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w -e"
 end
 
 ###
