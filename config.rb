@@ -25,7 +25,7 @@ activate :deploy do |deploy|
   deploy.clean  = true
   deploy.host   = "spriteowl.owl-stars.com"
   deploy.path   = "/var/www/spriteowl.owl-stars.com/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w -e"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
 end
 
 ###
@@ -54,11 +54,15 @@ end
 configure :build do
   # cache
   activate :minify_css
+  activate :minify_html
   activate :minify_javascript
+  activate :imageoptim do |options|
+    options.pngout_options    = false
+    options.advpng_options    = false
+  end
   # others
   activate :cache_buster
   activate :favicon_maker
-  activate :relative_assets
   # analytics
   activate :google_analytics do |ga|
     ga.anonymize_ip = true

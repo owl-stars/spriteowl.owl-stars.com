@@ -11,7 +11,7 @@ title: Home
         = partial "partials/buybutton"
 
       .col-sm-6.preview.hidden-xs
-        %img.img-responsive{src: "assets/img/cinema/spriteowl-extension-colors.png"}
+        =image_tag "cinema/spriteowl-extension-colors.png", :alt => "", :class => "img-responsive"
 
 .section.howto
   .container
@@ -27,7 +27,7 @@ title: Home
       .col-sm-4
         .box
           .arrow
-          %img.teaserImg{src: "assets/img/content/howto/how1.png"}
+          =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
           %h3.title Photoshop
           %p.content Place your elements and name your groups and layers in your Photoshop file.
 
@@ -35,13 +35,13 @@ title: Home
       .col-sm-4
         .box
           .arrow
-          %img.teaserImg{src: "assets/img/content/howto/yes-how2-magic.png"}
+          =image_tag "content/howto/yes-how2-magic.png", :alt => "", :class => "teaserImg"
           %h3.title Spriteowl
           %p.content Choose your export options in the Spriteowl Photoshop extension and let the magic happen!
 
       .col-sm-4
         .box
-          %img.teaserImg{src: "assets/img/content/howto/yes-how3.png"}
+          =image_tag "content/howto/yes-how3.png", :alt => "", :class => "teaserImg"
           %h3.title CSS, LESS, SASS/SCSS, Stylus + PNG file(s)
           %p.content Import the generated code + PNG file(s) into your project.
 

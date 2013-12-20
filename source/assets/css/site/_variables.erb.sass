@@ -36,14 +36,9 @@ $cornerRaduis   : 5px
 
 // --- images ---
 
-$sprite         : url("/assets/img/site/sprite.png")
-$examplesprite  : url("/assets/img/site/examplesprite.png")
-$bgImg          : url('/assets/img/site/bg.gif')
-$bgImgDark      : url('/assets/img/site/bgdark.gif')
-$bgNaviDesktop  : url('/assets/img/site/bgnavi-desktop.png')
-$bgNaviMobile   : url('/assets/img/site/bgnavi-mobile.png')
-
-// --- animation ---
-
-$transitionSpeed: 0.1s
-$transitionStyle: color $transitionSpeed linear
+$sprite         : url("<%= image_path 'site/sprite.png'%>")
+$examplesprite  : url("<%= image_path 'site/examplesprite.png'%>")
+$bgImg          : url("<%= image_path 'site/bg.gif'%>")
+$bgImgDark      : url("<%= image_path 'site/bgdark.gif'%>")
+$bgNaviDesktop  : url("<%= image_path 'site/bbgnavi-desktop.png'%>")
+$bgNaviMobile   : url("<%= image_path 'site/bgnavi-mobile.png'%>")

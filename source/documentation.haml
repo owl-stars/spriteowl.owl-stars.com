@@ -51,14 +51,14 @@ title: Documentation
         .col-sm-3
           .box
             .arrow
-            %img.teaserImg{src: "assets/img/content/howto/how1.png"}
+            =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
             %h3.title Photoshop
             %p.content Create a sprite Psd
 
         .col-sm-3
           .box
             .arrow
-            %img.teaserImg{src: "assets/img/content/howto/no-how2.png"}
+            =image_tag "content/howto/no-how2.png.png", :alt => "", :class => "teaserImg"
             %h3.title Export Image
             %p.content Export the sprite image
 
@@ -66,14 +66,14 @@ title: Documentation
         .col-sm-3
           .box
             .arrow
-            %img.teaserImg{src: "assets/img/content/howto/no-how3-boring.png"}
+            =image_tag "content/howto/no-how3-boring.png", :alt => "", :class => "teaserImg"
             %h3.title Measure
             %p.content Look up each element
 
 
         .col-sm-3
           .box
-            %img.teaserImg{src: "assets/img/content/howto/no-how4.png"}
+            =image_tag "content/howto/no-how4.png", :alt => "", :class => "teaserImg"
             %h3.title Code
             %p.content Write CSS code
 
@@ -86,20 +86,20 @@ title: Documentation
         .col-sm-4
           .box
             .arrow
-            %img.teaserImg{src: "assets/img/content/howto/how1.png"}
+            =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
             %h3.title Photoshop
             %p.content Place your elements and name your groups and layers
 
         .col-sm-4
           .box
             .arrow
-            %img.teaserImg{src: "assets/img/content/howto/yes-how2-magic.png"}
+            =image_tag "content/howto/yes-how2-magic.png", :alt => "", :class => "teaserImg"
             %h3.title Spriteowl
             %p.content Choose an export option and let the magic happen!
 
         .col-sm-4
           .box
-            %img.teaserImg{src: "assets/img/content/howto/yes-how3.png"}
+            =image_tag "content/howto/yes-how3.png", :alt => "", :class => "teaserImg"
             %h3.title CSS, LESS, SASS/SCSS, Stylus + PNG
             %p.content Import the generated stylesheet + PNG file(s) into your project
 
@@ -117,7 +117,7 @@ title: Documentation
     .row
       .col-sm-6
         .teaserImg
-          %img{src: "assets/img/content/settings/spriteowl-extension.png"}
+          =image_tag "content/settings/spriteowl-extension.png", :alt => ""
 
       .col-sm-6
         %ol
@@ -174,7 +174,7 @@ title: Documentation
 
       .col-sm-6
         .teaserImg
-          %img{src: "assets/img/content/example/psd-layers.png"}
+          =image_tag "content/example/psd-layers.png", :alt => ""
 
     .row
       .col-sm-6
@@ -201,7 +201,7 @@ title: Documentation
 
       .col-sm-6.exampleextension
         .teaserImg
-          %img{src: "assets/img/content/settings/spriteowl-extension.png"}
+          =image_tag "content/settings/spriteowl-extension.png", :alt => ""
 
     .row
       .col-sm-6
@@ -217,17 +217,17 @@ title: Documentation
             <strong>Here are a few examples with the HTML and preprocessor code on the right:</strong>
             %br
             %br
-            .codeexample
-              .example1.box
-                .pacman
-                .coffe
-                .heart
-                Example 1 - display()
-              .example2.box
-                .pacman
-                Example 2 - float-left( 10px, 0 )
-              .example3.box
-                Example 3 - after-absolute-inside( top, center, 0, 10px )
+          .codeexample
+            .example1.box
+              .pacman
+              .coffe
+              .heart
+              Example 1 - display()
+            .example2.box
+              .pacman
+              Example 2 - float-left( 10px, 0 )
+            .example3.box
+              Example 3 - after-absolute-inside( top, center, 0, 10px )
 
       .col-sm-6
 
