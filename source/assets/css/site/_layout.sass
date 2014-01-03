@@ -42,14 +42,14 @@
     padding: 0
     border-bottom: 0
     list-style-type: none
-    font-size: $fontSizeTitle
+    font-size: $fontSizeSmall
     +fontSpecialRegular
 
     > li
       margin-right: 4px
 
       &.htmltab
-        margin-right: 34px
+        margin-right: 7px
 
       &.active
         a
@@ -59,7 +59,7 @@
       a
         text-decoration: none
         border-radius: 5px 5px 0 0
-        padding: 8px 15px 8px
+        padding: 5px 8px
         border: 1px solid $colorBadge
         border-bottom: 0
         color: $colorFontDefault !important
@@ -123,8 +123,6 @@
 #header
   background: $bgImg
 
-
-
   >.navbar
     background: none
     border: none
@@ -157,12 +155,10 @@
           background: $colorFontDefault
 
     nav
-      background: $colorBgDefault
-      padding-bottom: 30px
 
       .nav
-        margin: 0
-        padding-top: 1px
+        margin: 0 0 20px 0
+        border-top: 1px solid $colorBorder
 
         li
           list-style-type: none
@@ -653,8 +649,18 @@
     >.navbar
       nav
         width: auto
-        margin-top: 36px
-        background: none
+        .nav
+          margin: 37px 0 0 0
+          border-top: none
+
+  .tabbox
+    .nav-tabs
+      font-size: $fontSizeSubTitle
+      > li
+        &.htmltab
+          margin-right: 15px
+        a
+          padding: 8px 15px
 
   #main
     .section
