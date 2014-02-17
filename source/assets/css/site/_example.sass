@@ -13,11 +13,11 @@
 //     - up
 //     - over
 //
-$example-sheet-width: 31px
-$example-sheet-height: 114px
+$example-sheet-width: 50px !default
+$example-sheet-height: 130px !default
 $example-sheet-image: url("example.png") !default
 $example-sheet-image-2x: url("example@2x.png") !default
-$example-sheet: 31px 114px url("example.png") url("example@2x.png") example
+$example-sheet: $example-sheet-width $example-sheet-height $example-sheet-image $example-sheet-image-2x example !default
 
 =example-element()
   background-image: $example-sheet-image
@@ -28,11 +28,11 @@ $example-sheet: 31px 114px url("example.png") url("example@2x.png") example
 %example-element
   +example-element()
 
-$example-coffee-x: -1px
-$example-coffee-y: 0
-$example-coffee-width: 30px
-$example-coffee-height: 19px
-$example-coffee: -1px 0 30px 19px example-coffee
+$example-coffee-x: -12px !default
+$example-coffee-y: -11px !default
+$example-coffee-width: 30px !default
+$example-coffee-height: 19px !default
+$example-coffee: $example-coffee-x $example-coffee-y $example-coffee-width $example-coffee-height example-coffee !default
 
 =example-coffee-width()
   width: $example-coffee-width
@@ -58,11 +58,11 @@ $example-coffee: -1px 0 30px 19px example-coffee
 %example-coffee
   +example-coffee()
 
-$example-pacman-up-x: 0
-$example-pacman-up-y: -39px
-$example-pacman-up-width: 27px
-$example-pacman-up-height: 30px
-$example-pacman-up: 0 -39px 27px 30px example-pacman-up
+$example-pacman-up-x: -11px !default
+$example-pacman-up-y: -50px !default
+$example-pacman-up-width: 27px !default
+$example-pacman-up-height: 30px !default
+$example-pacman-up: $example-pacman-up-x $example-pacman-up-y $example-pacman-up-width $example-pacman-up-height example-pacman-up !default
 
 =example-pacman-up-width()
   width: $example-pacman-up-width
@@ -88,11 +88,11 @@ $example-pacman-up: 0 -39px 27px 30px example-pacman-up
 %example-pacman-up
   +example-pacman-up()
 
-$example-pacman-over-x: 0
-$example-pacman-over-y: -84px
-$example-pacman-over-width: 27px
-$example-pacman-over-height: 30px
-$example-pacman-over: 0 -84px 27px 30px example-pacman-over
+$example-pacman-over-x: -11px !default
+$example-pacman-over-y: -90px !default
+$example-pacman-over-width: 27px !default
+$example-pacman-over-height: 30px !default
+$example-pacman-over: $example-pacman-over-x $example-pacman-over-y $example-pacman-over-width $example-pacman-over-height example-pacman-over !default
 
 =example-pacman-over-width()
   width: $example-pacman-over-width
