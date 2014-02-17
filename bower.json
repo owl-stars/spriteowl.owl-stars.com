@@ -2,10 +2,10 @@
   "private": true,
   "name": "middleman-site-spriteowl",
   "dependencies": {
-    "jquery": "~1.9.1",
-    "cssowl": "~1.0.6",
-    "ajaxchimp": "~1.0.2",
+    "jquery": "~1.9",
+    "cssowl": "~1.2",
+    "ajaxchimp": "~1.0",
     "flexslider": "latest",
-    "sass-bootstrap": "~3.0.1"
+    "sass-bootstrap": "~3.0"
   }
 }

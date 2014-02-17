@@ -107,7 +107,8 @@
         color: $colorFontGreyDark
         text-decoration: none
         > .home
-          +sprite-icon-home-replace-inline(-4px)
+          margin-bottom: -3px
+          +cssowl-sprite-replace($sprite-icon-home)
 
   .madeby
     color: $colorFontGreyDark
@@ -116,7 +117,8 @@
     float: right
     > .wjds
       margin-left: 5px
-      +sprite-graphic-wjds-replace-inline(-5px)
+      margin-bottom: -4px
+      +cssowl-sprite-replace($sprite-graphic-wjds)
 
 // --- header -------------------------------------------------------------------------------------
 
@@ -133,23 +135,25 @@
       height: 120px
 
       .logo
-        font-size: $fontSizeBase
         padding-top: 34px
-        +sprite-logo-spriteowl-before-absolute()
         text-decoration: none
         color: $colorFontDefault
+        font-size: $fontSizeBase
+        +cssowl-sprite-before-absolute($sprite-logo-spriteowl, false false false false)
+
         h1
           margin: 25px 0 0 90px
+
         h2
-          color: $colorFontSpriteowl
           margin: 5px 0 0 120px
+          color: $colorFontSpriteowl
           font-size: $fontSizeSubTitle
 
       .navbar-toggle
         height: 40px
         margin-top: 48px
-        border: 1px solid $colorFontDefault
         +border-radius($cornerRaduis)
+        border: 1px solid $colorFontDefault
 
         >.icon-bar
           background: $colorFontDefault
@@ -277,26 +281,26 @@
         height: 150px
 
         &.icon-code
-          +sprite-icon-code-before-absolute(25px,0,0,18px)
+          +cssowl-sprite-before-absolute($sprite-icon-code, 25px 0 0 18px)
 
         &.icon-heart
-          +sprite-icon-heart-before-absolute(23px,0,0,18px)
+          +cssowl-sprite-before-absolute($sprite-icon-heart, 23px 0 0 18px)
 
         &.icon-clock
-          +sprite-icon-clock-before-absolute(23px,0,0,18px)
+          +cssowl-sprite-before-absolute($sprite-icon-clock, 23px 0 0 18px)
 
         &.icon-arrange
-          +sprite-icon-arrange-before-absolute(23px,0,0,18px)
+          +cssowl-sprite-before-absolute($sprite-icon-arrange, 23px 0 0 18px)
 
         &.icon-ps
-          +sprite-icon-ps-before-absolute(23px,0,0,18px)
+          +cssowl-sprite-before-absolute($sprite-icon-ps, 23px 0 0 18px)
 
         &.icon-display
-          color: $colorFontGrey
-          +sprite-icon-display-before-absolute(23px,0,0,18px)
+          +cssowl-sprite-before-absolute($sprite-icon-display, 23px 0 0 18px)
 
         > .title
           margin: 20px 20px 10px 65px
+
         > .content
           margin: 10px 20px 20px 65px
 
@@ -319,8 +323,8 @@
             margin: 20px 0 10px
 
           .arrow
-            +sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
-
+            //+sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
+            +cssowl-sprite-absolute-outside($sprite-graphic-howtoArrowDown, bottom, center, 0, -20px)
 
 
     &.benefits
@@ -355,9 +359,8 @@
             margin: 20px 0 10px
 
           .arrow
-            +sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
-
-
+            //+sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
+            +cssowl-sprite-absolute-outside($sprite-graphic-howtoArrowDown, bottom, center, 0, -20px)
 
     &.settings
       .row
@@ -365,19 +368,18 @@
           text-align: center
 
         ul, ol
-          margin: 0 0 0 20px
           padding: 0
-          //list-style: none
+          margin: 0 0 0 20px
 
           li
+            margin: 0 0 20px
             +fontSpecialRegular
             font-size: $fontSizeBig
-            margin: 0 0 20px
 
             .box
-              border-left: 1px dashed $colorFontDefault
               padding: 10px 0 0 20px
               font-size: $fontSizeBase
+              border-left: 1px dashed $colorFontDefault
 
               h3
                 margin-top: 5px
@@ -386,9 +388,6 @@
 
               p
                 +fontDefaultRegular
-                //font-size: $fontSizeBase
-
-
 
     &.example
       .row
@@ -414,6 +413,7 @@
             margin-top: 5px
             margin-bottom: 10px
             margin-left: 20px
+
           p
             margin-left: 20px
 
@@ -433,49 +433,43 @@
             margin: 20px 0
 
           .example1
-            >.pacman
-              +examplesprite-icon-pacMan-display-inline()
-            >.coffe
-              +examplesprite-icon-coffe-display-inline()
-            >.heart
-              +examplesprite-logo-heart-display-inline()
+
+            > .coffee
+              @extend %example-coffee
 
           .example2
-            >.pacman
-              +examplesprite-icon-pacMan-float-left(10px,0)
 
-          .example3
-            text-align: center
-            padding-top: 30px
-            +examplesprite-icon-coffe-after-absolute-inside(top, center, 0, 10px)
+            > .pacman
+              @extend %example-pacman-up
 
-
+              &:hover
+                @extend %example-pacman-over-position
 
     &.faq
 
       .box
-        background: #ffffff
-        margin: 5px 0
         padding: 1px
+        margin: 5px 0
+        background: #fff
         +border-radius($cornerRaduis)
 
         &.active
           > .title
-            +sprite-button-up-up-after-float(0,4px)
+            +cssowl-sprite-after-float($sprite-button-up-up, 4px 0 0 0)
 
-            &:hover
-              +sprite-button-up-over-after-float(0,4px)
+            &:hover:after
+              +sprite-button-up-over-position()
 
           > .content
             display: block
 
         > .title
-          margin: 12px 20px 12px 20px
-          +sprite-button-down-up-after-float(0,4px)
           cursor: pointer
+          margin: 12px 20px 12px 20px
+          +cssowl-sprite-after-float($sprite-button-down-up, 4px 0 0 0)
 
-          &:hover
-            +sprite-button-down-over-after-float(0,4px)
+          &:hover:after
+            +sprite-button-down-over-position()
 
         > .content
           display: none
@@ -618,9 +612,11 @@
       text-align: center
       padding-top: 20px
       margin-bottom: 40px
+
       > .wjds
         margin-left: 5px
-        +sprite-graphic-wjds-replace-inline(-5px)
+        margin-bottom: -4px
+        +cssowl-sprite-replace($sprite-graphic-wjds)
 
 // --- media --------------------------------------------------------------------------------------
 
@@ -672,10 +668,12 @@
         .row
           .box
             margin-bottom: 0
+
             .arrow
               left: auto
               margin-left: none
-              +sprite-graphic-howtoArrowRight-absolute-inside(top,right,-20px,70px)
+              +cssowl-sprite-absolute-inside($sprite-graphic-howtoArrowRight, top, right, -20px, 70px)
+              +sprite-graphic-howtoArrowRight-position()
 
 
 @media (min-width: $screen-desktop)
