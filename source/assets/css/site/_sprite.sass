@@ -3,6 +3,7 @@
 // Please define the location for your image source:
 //
 // $sprite-sheet-image: url("sprite.png")
+// $sprite-sheet-image-2x: url("sprite@2x.png")
 //
 // --- Layers --------------------------------------------
 //
@@ -35,14 +36,18 @@
 //     - howtoArrowDown
 //     - howtoArrowRight
 //
-$sprite-sheet-width: 139px !default
-$sprite-sheet-height: 403px !default
+$sprite-sheet-width: 127px !default
+$sprite-sheet-height: 468px !default
 $sprite-sheet-image: url("sprite.png") !default
-$sprite-sheet: $sprite-sheet-width $sprite-sheet-height $sprite-sheet-image sprite !default
+$sprite-sheet-image-2x: url("sprite@2x.png") !default
+$sprite-sheet: $sprite-sheet-width $sprite-sheet-height $sprite-sheet-image $sprite-sheet-image-2x sprite !default
 
 =sprite-element()
   background-image: $sprite-sheet-image
   background-repeat: no-repeat
+  @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+    background-image: $sprite-sheet-image-2x
+    background-size: $sprite-sheet-width $sprite-sheet-height
 %sprite-element
   +sprite-element()
 
@@ -76,9 +81,9 @@ $sprite-logo-spriteowl: $sprite-logo-spriteowl-x $sprite-logo-spriteowl-y $sprit
 %sprite-logo-spriteowl
   +sprite-logo-spriteowl()
 
-$sprite-button-up-up-x: -63px !default
-$sprite-button-up-up-y: -251px !default
-$sprite-button-up-up-width: 22px !default
+$sprite-button-up-up-x: -50px !default
+$sprite-button-up-up-y: -249px !default
+$sprite-button-up-up-width: 21px !default
 $sprite-button-up-up-height: 22px !default
 $sprite-button-up-up: $sprite-button-up-up-x $sprite-button-up-up-y $sprite-button-up-up-width $sprite-button-up-up-height sprite-button-up-up !default
 
@@ -106,9 +111,9 @@ $sprite-button-up-up: $sprite-button-up-up-x $sprite-button-up-up-y $sprite-butt
 %sprite-button-up-up
   +sprite-button-up-up()
 
-$sprite-button-up-over-x: -112px !default
-$sprite-button-up-over-y: -251px !default
-$sprite-button-up-over-width: 22px !default
+$sprite-button-up-over-x: -100px !default
+$sprite-button-up-over-y: -249px !default
+$sprite-button-up-over-width: 21px !default
 $sprite-button-up-over-height: 22px !default
 $sprite-button-up-over: $sprite-button-up-over-x $sprite-button-up-over-y $sprite-button-up-over-width $sprite-button-up-over-height sprite-button-up-over !default
 
@@ -136,9 +141,9 @@ $sprite-button-up-over: $sprite-button-up-over-x $sprite-button-up-over-y $sprit
 %sprite-button-up-over
   +sprite-button-up-over()
 
-$sprite-button-down-up-x: -63px !default
-$sprite-button-down-up-y: -201px !default
-$sprite-button-down-up-width: 22px !default
+$sprite-button-down-up-x: -50px !default
+$sprite-button-down-up-y: -199px !default
+$sprite-button-down-up-width: 21px !default
 $sprite-button-down-up-height: 22px !default
 $sprite-button-down-up: $sprite-button-down-up-x $sprite-button-down-up-y $sprite-button-down-up-width $sprite-button-down-up-height sprite-button-down-up !default
 
@@ -166,9 +171,9 @@ $sprite-button-down-up: $sprite-button-down-up-x $sprite-button-down-up-y $sprit
 %sprite-button-down-up
   +sprite-button-down-up()
 
-$sprite-button-down-over-x: -112px !default
-$sprite-button-down-over-y: -201px !default
-$sprite-button-down-over-width: 22px !default
+$sprite-button-down-over-x: -100px !default
+$sprite-button-down-over-y: -199px !default
+$sprite-button-down-over-width: 21px !default
 $sprite-button-down-over-height: 22px !default
 $sprite-button-down-over: $sprite-button-down-over-x $sprite-button-down-over-y $sprite-button-down-over-width $sprite-button-down-over-height sprite-button-down-over !default
 
@@ -196,9 +201,9 @@ $sprite-button-down-over: $sprite-button-down-over-x $sprite-button-down-over-y 
 %sprite-button-down-over
   +sprite-button-down-over()
 
-$sprite-button-next-up-x: -63px !default
-$sprite-button-next-up-y: -151px !default
-$sprite-button-next-up-width: 22px !default
+$sprite-button-next-up-x: -50px !default
+$sprite-button-next-up-y: -149px !default
+$sprite-button-next-up-width: 21px !default
 $sprite-button-next-up-height: 22px !default
 $sprite-button-next-up: $sprite-button-next-up-x $sprite-button-next-up-y $sprite-button-next-up-width $sprite-button-next-up-height sprite-button-next-up !default
 
@@ -226,9 +231,9 @@ $sprite-button-next-up: $sprite-button-next-up-x $sprite-button-next-up-y $sprit
 %sprite-button-next-up
   +sprite-button-next-up()
 
-$sprite-button-next-over-x: -112px !default
-$sprite-button-next-over-y: -151px !default
-$sprite-button-next-over-width: 22px !default
+$sprite-button-next-over-x: -100px !default
+$sprite-button-next-over-y: -149px !default
+$sprite-button-next-over-width: 21px !default
 $sprite-button-next-over-height: 22px !default
 $sprite-button-next-over: $sprite-button-next-over-x $sprite-button-next-over-y $sprite-button-next-over-width $sprite-button-next-over-height sprite-button-next-over !default
 
@@ -256,9 +261,9 @@ $sprite-button-next-over: $sprite-button-next-over-x $sprite-button-next-over-y 
 %sprite-button-next-over
   +sprite-button-next-over()
 
-$sprite-button-back-up-x: -63px !default
-$sprite-button-back-up-y: -101px !default
-$sprite-button-back-up-width: 22px !default
+$sprite-button-back-up-x: -50px !default
+$sprite-button-back-up-y: -99px !default
+$sprite-button-back-up-width: 21px !default
 $sprite-button-back-up-height: 22px !default
 $sprite-button-back-up: $sprite-button-back-up-x $sprite-button-back-up-y $sprite-button-back-up-width $sprite-button-back-up-height sprite-button-back-up !default
 
@@ -286,9 +291,9 @@ $sprite-button-back-up: $sprite-button-back-up-x $sprite-button-back-up-y $sprit
 %sprite-button-back-up
   +sprite-button-back-up()
 
-$sprite-button-back-over-x: -112px !default
-$sprite-button-back-over-y: -101px !default
-$sprite-button-back-over-width: 22px !default
+$sprite-button-back-over-x: -100px !default
+$sprite-button-back-over-y: -99px !default
+$sprite-button-back-over-width: 21px !default
 $sprite-button-back-over-height: 22px !default
 $sprite-button-back-over: $sprite-button-back-over-x $sprite-button-back-over-y $sprite-button-back-over-width $sprite-button-back-over-height sprite-button-back-over !default
 
@@ -316,9 +321,9 @@ $sprite-button-back-over: $sprite-button-back-over-x $sprite-button-back-over-y 
 %sprite-button-back-over
   +sprite-button-back-over()
 
-$sprite-icon-home-x: -63px !default
-$sprite-icon-home-y: -301px !default
-$sprite-icon-home-width: 22px !default
+$sprite-icon-home-x: -50px !default
+$sprite-icon-home-y: -299px !default
+$sprite-icon-home-width: 21px !default
 $sprite-icon-home-height: 20px !default
 $sprite-icon-home: $sprite-icon-home-x $sprite-icon-home-y $sprite-icon-home-width $sprite-icon-home-height sprite-icon-home !default
 
@@ -347,7 +352,7 @@ $sprite-icon-home: $sprite-icon-home-x $sprite-icon-home-y $sprite-icon-home-wid
   +sprite-icon-home()
 
 $sprite-icon-heart-x: 0 !default
-$sprite-icon-heart-y: -101px !default
+$sprite-icon-heart-y: -99px !default
 $sprite-icon-heart-width: 30px !default
 $sprite-icon-heart-height: 30px !default
 $sprite-icon-heart: $sprite-icon-heart-x $sprite-icon-heart-y $sprite-icon-heart-width $sprite-icon-heart-height sprite-icon-heart !default
@@ -377,9 +382,9 @@ $sprite-icon-heart: $sprite-icon-heart-x $sprite-icon-heart-y $sprite-icon-heart
   +sprite-icon-heart()
 
 $sprite-icon-clock-x: 0 !default
-$sprite-icon-clock-y: -151px !default
+$sprite-icon-clock-y: -149px !default
 $sprite-icon-clock-width: 31px !default
-$sprite-icon-clock-height: 30px !default
+$sprite-icon-clock-height: 31px !default
 $sprite-icon-clock: $sprite-icon-clock-x $sprite-icon-clock-y $sprite-icon-clock-width $sprite-icon-clock-height sprite-icon-clock !default
 
 =sprite-icon-clock-width()
@@ -407,9 +412,9 @@ $sprite-icon-clock: $sprite-icon-clock-x $sprite-icon-clock-y $sprite-icon-clock
   +sprite-icon-clock()
 
 $sprite-icon-ps-x: 0 !default
-$sprite-icon-ps-y: -201px !default
+$sprite-icon-ps-y: -199px !default
 $sprite-icon-ps-width: 31px !default
-$sprite-icon-ps-height: 31px !default
+$sprite-icon-ps-height: 32px !default
 $sprite-icon-ps: $sprite-icon-ps-x $sprite-icon-ps-y $sprite-icon-ps-width $sprite-icon-ps-height sprite-icon-ps !default
 
 =sprite-icon-ps-width()
@@ -437,9 +442,9 @@ $sprite-icon-ps: $sprite-icon-ps-x $sprite-icon-ps-y $sprite-icon-ps-width $spri
   +sprite-icon-ps()
 
 $sprite-icon-code-x: 0 !default
-$sprite-icon-code-y: -251px !default
+$sprite-icon-code-y: -249px !default
 $sprite-icon-code-width: 29px !default
-$sprite-icon-code-height: 25px !default
+$sprite-icon-code-height: 26px !default
 $sprite-icon-code: $sprite-icon-code-x $sprite-icon-code-y $sprite-icon-code-width $sprite-icon-code-height sprite-icon-code !default
 
 =sprite-icon-code-width()
@@ -467,9 +472,9 @@ $sprite-icon-code: $sprite-icon-code-x $sprite-icon-code-y $sprite-icon-code-wid
   +sprite-icon-code()
 
 $sprite-icon-display-x: 0 !default
-$sprite-icon-display-y: -301px !default
+$sprite-icon-display-y: -299px !default
 $sprite-icon-display-width: 30px !default
-$sprite-icon-display-height: 26px !default
+$sprite-icon-display-height: 27px !default
 $sprite-icon-display: $sprite-icon-display-x $sprite-icon-display-y $sprite-icon-display-width $sprite-icon-display-height sprite-icon-display !default
 
 =sprite-icon-display-width()
@@ -496,10 +501,10 @@ $sprite-icon-display: $sprite-icon-display-x $sprite-icon-display-y $sprite-icon
 %sprite-icon-display
   +sprite-icon-display()
 
-$sprite-icon-arrange-x: -107px !default
-$sprite-icon-arrange-y: -291px !default
+$sprite-icon-arrange-x: 0 !default
+$sprite-icon-arrange-y: -349px !default
 $sprite-icon-arrange-width: 32px !default
-$sprite-icon-arrange-height: 32px !default
+$sprite-icon-arrange-height: 33px !default
 $sprite-icon-arrange: $sprite-icon-arrange-x $sprite-icon-arrange-y $sprite-icon-arrange-width $sprite-icon-arrange-height sprite-icon-arrange !default
 
 =sprite-icon-arrange-width()
@@ -527,9 +532,9 @@ $sprite-icon-arrange: $sprite-icon-arrange-x $sprite-icon-arrange-y $sprite-icon
   +sprite-icon-arrange()
 
 $sprite-graphic-wjds-x: 0 !default
-$sprite-graphic-wjds-y: -385px !default
+$sprite-graphic-wjds-y: -449px !default
 $sprite-graphic-wjds-width: 127px !default
-$sprite-graphic-wjds-height: 18px !default
+$sprite-graphic-wjds-height: 19px !default
 $sprite-graphic-wjds: $sprite-graphic-wjds-x $sprite-graphic-wjds-y $sprite-graphic-wjds-width $sprite-graphic-wjds-height sprite-graphic-wjds !default
 
 =sprite-graphic-wjds-width()
@@ -557,9 +562,9 @@ $sprite-graphic-wjds: $sprite-graphic-wjds-x $sprite-graphic-wjds-y $sprite-grap
   +sprite-graphic-wjds()
 
 $sprite-graphic-howtoArrowDown-x: -50px !default
-$sprite-graphic-howtoArrowDown-y: -335px !default
+$sprite-graphic-howtoArrowDown-y: -399px !default
 $sprite-graphic-howtoArrowDown-width: 40px !default
-$sprite-graphic-howtoArrowDown-height: 42px !default
+$sprite-graphic-howtoArrowDown-height: 43px !default
 $sprite-graphic-howtoArrowDown: $sprite-graphic-howtoArrowDown-x $sprite-graphic-howtoArrowDown-y $sprite-graphic-howtoArrowDown-width $sprite-graphic-howtoArrowDown-height sprite-graphic-howtoArrowDown !default
 
 =sprite-graphic-howtoArrowDown-width()
@@ -587,9 +592,9 @@ $sprite-graphic-howtoArrowDown: $sprite-graphic-howtoArrowDown-x $sprite-graphic
   +sprite-graphic-howtoArrowDown()
 
 $sprite-graphic-howtoArrowRight-x: 0 !default
-$sprite-graphic-howtoArrowRight-y: -335px !default
+$sprite-graphic-howtoArrowRight-y: -399px !default
 $sprite-graphic-howtoArrowRight-width: 42px !default
-$sprite-graphic-howtoArrowRight-height: 39px !default
+$sprite-graphic-howtoArrowRight-height: 40px !default
 $sprite-graphic-howtoArrowRight: $sprite-graphic-howtoArrowRight-x $sprite-graphic-howtoArrowRight-y $sprite-graphic-howtoArrowRight-width $sprite-graphic-howtoArrowRight-height sprite-graphic-howtoArrowRight !default
 
 =sprite-graphic-howtoArrowRight-width()

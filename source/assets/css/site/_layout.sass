@@ -365,6 +365,7 @@
     &.settings
       .row
         .teaserImg
+          margin-top: 80px
           text-align: center
 
         ul, ol
@@ -445,8 +446,34 @@
               &:hover
                 @extend %example-pacman-over-position
 
-    &.faq
+    &.mixins
+      .row
+        .tabbox
+          margin-top: 10px
+          margin-bottom: 60px
+        
+        .nr
+          float: left
+          +fontSpecialRegular
+          font-size: $fontSizeBig
+          width: 25px
+          
+        .content
+          float: left
+          border-left: 1px dashed $colorFontDefault
+          height: 100%
+          width: 90%
+          margin-bottom: 20px
 
+          h3
+            margin-top: 5px
+            margin-bottom: 10px
+            margin-left: 20px
+
+          p
+            margin-left: 20px
+            
+    &.faq
       .box
         padding: 1px
         margin: 5px 0

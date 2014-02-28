@@ -7,103 +7,6 @@ title: Documentation
     .col-xs-12.info
       %h2.title Spriteowl product overview
 
-.section.benefits
-  .container
-    .row
-      .col-xs-12.col-md-10.col-md-offset-1.intro
-        %h2 How you benefit from Spriteowl
-
-        %p.introText
-          <strong>Writing CSS code for a sprite image is a time-consuming job as you always have to measure x, y, width and height of all sprite elements</strong>. And if elements change or new ones are added, you have no choice but to start measuring again.
-          Wouldn't it be great, if you could just do your updates and let someone else take over this annoying job? <strong>Well, lucky you, that's where Spriteowl comes in.</strong>
-
-
-    .row
-      .col-sm-4
-        .boxinfo
-          %h3.title
-            What you get
-          %p.content
-            With Spriteowl you will not only get an optimized PNG of your Photoshop sprite file, but also a stylesheet which contains <strong>each layer's position (x/y) and dimension (width/height)!</strong>
-
-      .col-sm-4
-        .boxinfo
-          %h3.title
-            Preprocessors support
-          %p.content
-            When working with one of the preprocessors <strong>LESS, SASS/SCSS or Stylus</strong> you will get a stylesheet as well as useful mixins from the #{link_to 'Cssowl mixin library', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'} with a many functions to easily position your sprite elements.
-
-      .col-sm-4
-        .boxinfo
-          %h3.title
-            Namespace support
-          %p.content
-            Spriteowl uses namespaces to bring sprite elements into your HTML. So by just naming your groups and layers, <strong>you no longer have to worry about position changes of the sprite elements in your original Psd file</strong>.
-
-
-
-    .no-spriteowl
-      .row
-        .col-xs-12.col-md-8.col-md-offset-2.intro
-          %h3 The usual workflow with sprites and CSS can drive you mad
-
-      .row
-        .col-sm-3
-          .box
-            .arrow
-            =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
-            %h3.title Photoshop
-            %p.content Create a sprite Psd
-
-        .col-sm-3
-          .box
-            .arrow
-            =image_tag "content/howto/no-how2.png", :alt => "", :class => "teaserImg"
-            %h3.title Export Image
-            %p.content Export the sprite image
-
-
-        .col-sm-3
-          .box
-            .arrow
-            =image_tag "content/howto/no-how3-boring.png", :alt => "", :class => "teaserImg"
-            %h3.title Measure
-            %p.content Look up each element
-
-
-        .col-sm-3
-          .box
-            =image_tag "content/howto/no-how4.png", :alt => "", :class => "teaserImg"
-            %h3.title Code
-            %p.content Write CSS code
-
-    .yes-spriteowl
-      .row
-        .col-xs-12.col-md-8.col-md-offset-2.intro
-          %h2
-            Save time and nerves with the Spriteowl way
-      .row
-        .col-sm-4
-          .box
-            .arrow
-            =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
-            %h3.title Photoshop
-            %p.content Place your elements and name your groups and layers
-
-        .col-sm-4
-          .box
-            .arrow
-            =image_tag "content/howto/yes-how2-magic.png", :alt => "", :class => "teaserImg"
-            %h3.title Spriteowl
-            %p.content Choose an export option and let the magic happen!
-
-        .col-sm-4
-          .box
-            =image_tag "content/howto/yes-how3.png", :alt => "", :class => "teaserImg"
-            %h3.title CSS, LESS, SASS/SCSS, Stylus + PNG
-            %p.content Import the generated stylesheet + PNG file(s) into your project
-
-
 
 .section.bgDark.settings
   .container
@@ -112,7 +15,7 @@ title: Documentation
         %h2 The Extension
 
         %p.introText
-          This is what Spriteowl does for you: <strong>In just 3 quick'n'easy steps the extension automatically creates a stylesheet + PNG file(s) directly from Photoshop!</strong>
+          This is what Spriteowl does for you: <strong>In just 4 quick'n'easy steps the extension automatically creates a sprite stylesheet + PNG file(s) directly from Photoshop!</strong>
 
     .row
       .col-sm-6
@@ -126,28 +29,28 @@ title: Documentation
               %h3
                 Syntax:
               %p
-                Select the output syntax. We support CSS, LESS, SASS/SCSS and Stylus.
+                Select the output syntax. We support <strong>CSS, LESS, SASS/SCSS and Stylus</strong>.
 
           %li
             .box
               %h3
                 Retina:
               %p
-                Enabled Spriteowl will automatically generate an additional 50% downsized image and all the required media queries.
+                Choose this option on and Spriteowl will automatically generate <strong>two PNG files</strong>. A <strong>100% sized PNG</strong> (Retina) and an additional <strong>50% downsized PNG</strong> and all the required media queries.
 
           %li
             .box
               %h3
                 Trim:
               %p
-                Enabled Spriteowl will trim the output PNG for you.
+                Choose this option on and Spriteowl will <strong>trim the output PNG</strong> for you.
 
           %li
             .box
               %h3
                 Export:
               %p
-                Click and choose the location where to save the stylesheet + PNG file(s).
+                Click and choose the location where to <strong>save the sprite stylesheet + PNG file(s)</strong>.
 
 
 
@@ -174,7 +77,8 @@ title: Documentation
             %br
             %strong Tip:
             %br
-            You'll need at least one top level group as Spriteowl will export each of them as a separate sprite.
+            Spriteowl export <strong>each top level group as a separate sprite</strong> (sprite stylesheet + PNG).
+            %br
             Groups and layers should be named according to class names in HTML, since you will use them later in your stylesheets.
             %br
             %br
@@ -191,13 +95,15 @@ title: Documentation
           %h3
             Export
           %p
-            Now it's time to export your sprite!
+            <strong>Now it's time to export your sprite!</strong>
             %br
             %br
-            Define your options, click "<strong>Export</strong>" and choose a destination folder.
+            Select a output <strong>"Syntax"</strong>, choose <strong>"Retina"</strong> on to generate two PNG files in different sizes, decide whether you want to <strong>"Trim"</strong> the PNG or not, click <strong>"Export"</strong> and choose a destination folder.
             %br
             %br
-            Spriteowl will export each top level group as a separate spritesheet and it's PNGs.
+            After the export you'll find two type of files in your destination folder: <strong>the sprite stylesheet</strong> (CSS, LESS, SASS/SCSS or Stylus) and <strong>the PNG file(s)</strong>. If you look into the sprite stylesheet you will see that Spriteowl exactly generated the classes and mixins depending on your syntax and according to the layer and group structure of your sprite Psd.
+            %br
+            %br 
 
       .col-md-6.exampleextension
         .teaserImg
@@ -211,26 +117,29 @@ title: Documentation
           %h3
             How to use the exported files
           %p
-            Just import your spritesheet into your project and if necessary override the image sources.
+            Import your sprite stylsheet and PNG(s) into your project and place your sprite elements wherever you want.
+            %br
+            %br            
+            <strong>We provide you mixins and extendable placeholders for the height, width and position of each element.</strong> For more information please scroll down to <strong>the generated sprite stylesheet</strong> section.
             %br
             %br
-            %strong Here are two simple example usages:
+            Here are two simple examples:
             %br
-          .codeexample
-            .example1.box
-              .coffee
-              Example 1
-
-            .example2.box
-              .pacman
-              Example 2 (hover)
-
-            %br
+            .codeexample
+              .example1.box
+                .coffee
+                Example 1
+   
+              .example2.box
+                .pacman
+                Example 2 (hover)
+          %p
             %strong Tip:
             %br
             For more useful mixins check out the #{link_to 'Cssowl mixin library', 'http://cssowl.owl-stars.com', :target => '_blank'}.
             %br
             %br
+             
 
       .col-md-6
         .tabbox
@@ -245,7 +154,6 @@ title: Documentation
               %a{"data-toggle" => "tab", href: "#lesscode"} LESS
             %li
               %a{"data-toggle" => "tab", href: "#styluscode"} Stylus
-
 
           .tab-content
             #htmlcode.tab-pane.active.code
@@ -273,7 +181,7 @@ title: Documentation
                   :plain
                     // override the image sources before the import
                     $example-sheet-image: url("example.png")
-                    $example-sheet-image-2x: url("example@2x.png")
+                    $example-sheet-image-2x: url("example@2x.png") 
 
                     // import the example spritesheet
                     @import "example"
@@ -372,21 +280,31 @@ title: Documentation
                             example-pacman-over-position()
                             // or: @extend $example-pacman-over-position
 
+
+
+
 .section.bgDark.mixins
   .container
     .row
       .col-xs-12.col-md-8.col-md-offset-2.intro
-        %h2 Spritesheet
-
+        %h2
+          The generated sprite stylesheet
         %p.introText
-          The first part of the generated Spritesheet contains variables, mixins and extendable placeholders for the sprite itself like
-          sprite width, height & image sources.
+          The generated sprite stylesheet contains two code parts, the first part is for the sprite itself and the second part for the sprite elements
+
+    .row
+      .col-sm-12.col-lg-10
+        .nr
+          1.
+        .content
+          %h3
+            The sprite itself
+          %p
+            The first part of the generated sprite stylesheet contains variables, mixins and extendable placeholders for the sprite itself like the <strong>sprite width, height and the path to the sprite PNG files</strong>.
 
     .row
       .col-sm-12
-
         .tabbox
-
           %ul.nav.nav-tabs
             %li.active
               %a{"data-toggle" => "tab", href: "#sassvars"} SASS
@@ -398,7 +316,6 @@ title: Documentation
               %a{"data-toggle" => "tab", href: "#stylusvars"} Stylus
 
           .tab-content
-
             #sassvars.tab-pane.code.active
               = preserve do
                 -code("sass") do
@@ -496,20 +413,20 @@ title: Documentation
                     $example-element
                       sprite-element()
 
-
     .row
-      .col-xs-12.col-md-8.col-md-offset-2.intro
-        %h2 Spritesheet elements
-
-        %p.introText
-          The second part contains the variables, mixins and extendable placeholders for each sprite element.
-          In addition to it's variables, each layer includes the Cssowl sprite mixins. For more details and examples check out the #{link_to 'documentation', 'http://cssowl.owl-stars.com/sprite.html', :target => '_blank'}.
+      .col-sm-12.col-lg-10
+        .nr
+          2.
+        .content
+          %h3
+            The sprite elements
+          %p 
+            The second part contains the variables, mixins and extendable placeholders for each sprite element. <strong>The width() and height() sets the width or height of an element, sizes() sets both the width and height and the position() sets the x and y coordinates of an element.</strong>
+            For more useful mixins check out the <strong>#{link_to 'Cssowl mixin library', 'http://cssowl.owl-stars.com', :target => '_blank'}</strong>. 
 
     .row
       .col-sm-12
-
         .tabbox
-
           %ul.nav.nav-tabs
             %li.active
               %a{"data-toggle" => "tab", href: "#sassmixins"} SASS
