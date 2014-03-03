@@ -365,7 +365,6 @@
     &.settings
       .row
         .teaserImg
-          margin-top: 80px
           text-align: center
 
         ul, ol
@@ -591,7 +590,7 @@
     >.title
       +fontSpecialRegular
       font-size: $fontSizeBig
-      margin-left: 20px
+      margin-left: 15px
       margin-top: 15px
       float: left
 
@@ -611,6 +610,7 @@
       border: 1px solid $colorSpriteowlLight
       background: $colorBadge
       text-transform: uppercase
+      margin-top: 10px
 
       &:hover
         color: $colorFontWhite
@@ -687,9 +687,13 @@
 
   #main
     .section
-      &.settings, .exampleextension, &.install
+      &.exampleextension, &.install
         .teaserImg
           margin-top: 50px
+          
+      &.settings
+        .teaserImg
+          margin-top: 80px
 
       &.benefits, &.howto
         .row
@@ -716,5 +720,23 @@
           >.subtitle
             font-size: $fontSizeBig
           >.title
+            padding: 0
+            font-size: $fontSizeMegaBig
+            
+            
+@media (min-width: $screen-lg-desktop)
+
+  #main
+    .section
+      &.cinema
+        .info
+          >.subtitle
+            font-size: $fontSizeBig
+          >.title
             padding: 0 10px
             font-size: $fontSizeMegaBig
+  
+  #footer
+    .buy
+      >.title
+        margin-left: 25px
