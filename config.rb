@@ -25,7 +25,7 @@ activate :deploy do |deploy|
   deploy.clean  = true
   deploy.host   = "spriteowl.owl-stars.com"
   deploy.path   = "/var/www/spriteowl/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r"
 end
 
 ###
@@ -37,7 +37,9 @@ set :css_dir, 'assets/css'
 set :images_dir, 'assets/img'
 set :fonts_dir, 'assets/fonts'
 
-sprockets.append_path File.join "#{root}", "bower_components"
+after_configuration do
+  sprockets.append_path File.join "#{root}", "bower_components"
+end
 
 ###
 # Environments
@@ -62,7 +64,18 @@ configure :build do
   end
   # others
   activate :cache_buster
-  activate :favicon_maker
+  activate :favicon_maker, :icons => {
+    "favicon_base.png" => [
+      { icon: "apple-touch-icon-144x144-precomposed.png" },
+      { icon: "apple-touch-icon-120x120-precomposed.png" },
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-57x57-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+    ]
+  }
   # analytics
   activate :google_analytics do |ga|
     ga.anonymize_ip = true
