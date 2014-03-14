@@ -244,7 +244,7 @@
       color: $colorFontWhite
 
       &.home
-        padding-top: 50px
+        padding-top: 20px
         background: url('/assets/img/cinema/bghome.png') top center no-repeat $colorBgDark
         height: 380px
 
@@ -278,7 +278,7 @@
         +border-radius($cornerRaduis)
         margin-bottom: 20px
         padding: 1px
-        height: 150px
+        //height: 150px
 
         &.icon-code
           +cssowl-sprite-before-absolute($sprite-icon-code, 25px 0 0 18px)
@@ -325,8 +325,16 @@
           .arrow
             //+sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
             +cssowl-sprite-absolute-outside($sprite-graphic-howtoArrowDown, bottom, center, 0, -20px)
-
-
+            
+            
+    &.screencast
+      .ytvideo
+        >iframe
+          width: 100%
+          height: auto
+          min-height: 300px
+          
+      
     &.benefits
 
       .no-spriteowl
@@ -345,7 +353,6 @@
           +border-radius($cornerRaduis)
           padding: 20px
           margin-bottom: 20px
-
 
           >.title
             margin-top: 0
@@ -389,6 +396,8 @@
               p
                 +fontDefaultRegular
 
+                
+     
     &.example
       .row
         margin-bottom: 50px
@@ -634,16 +643,27 @@
     .twitter
       margin-top: 20px
       text-align: center
-
-    .madeby
-      text-align: center
+      
+    .links
       padding-top: 20px
+      text-align: center
       margin-bottom: 40px
-
-      > .wjds
-        margin-left: 5px
-        margin-bottom: -4px
-        +cssowl-sprite-replace($sprite-graphic-wjds)
+      
+      .press-kit
+        margin: 2px 15px
+        display: inline-block
+        a
+          color: $colorFontGreyDark
+          text-decoration: none
+  
+      .madeby
+        display: inline-block
+        margin: 2px 15px
+  
+        > .wjds
+          margin-left: 5px
+          margin-bottom: -4px
+          +cssowl-sprite-replace($sprite-graphic-wjds)
 
 
 
@@ -652,7 +672,7 @@
 
 @media (min-width: $screen-tablet)
 
-  footer
+  #footer
     .buy
       text-align: left
       .buyButton
@@ -668,8 +688,10 @@
     .info
       .twitter
         float: left
-      .madeby
-        float: right
+        
+      .links
+        text-align: right
+        
 
   #header
     >.navbar
@@ -690,6 +712,15 @@
 
   #main
     .section
+      &.cinema
+        &.home
+          padding-top: 40px
+      
+      &.screencast
+        .ytvideo
+          >iframe
+            min-height: 422px
+      
       &.exampleextension, &.install
         .teaserImg
           margin-top: 50px
@@ -697,9 +728,16 @@
       &.settings
         .teaserImg
           margin-top: 80px
+            
+      &.features
+        .box
+          height: 170px
 
       &.benefits, &.howto
         .row
+          .boxinfo
+            height: 320px
+          
           .box
             margin-bottom: 0
 
@@ -713,10 +751,15 @@
 @media (min-width: $screen-desktop)
   #main
     .section
+
+      &.features
+        .box
+          height: 140px
+      
       &.benefits
         .row
           .boxinfo
-            min-height: 200px
+            height: 240px
 
       &.cinema
         .info
@@ -726,8 +769,21 @@
             padding: 0
             font-size: $fontSizeMegaBig
             
-            
   // --- animation 
+  .startslidemodule-in-left
+    -webkit-transform: translateX(-300px)
+    transform: translateX(-300px)
+    -webkit-animation: come-in 0.8s ease forwards 1.5s
+    animation: come-in 0.8s ease forwards 1.5s
+    opacity: 0
+  
+  .startslidemodule-in-right
+    -webkit-transform: translateX(300px)
+    transform: translateX(300px)
+    -webkit-animation: come-in 0.8s ease forwards 1.5s
+    animation: come-in 0.8s ease forwards 1.5s
+    opacity: 0
+    
   
   .slidemodule-in
     -webkit-transform: translateY(100px)
@@ -739,6 +795,8 @@
   .slidemodule-already-visible
     -webkit-transform: translateY(0)
     transform: translateY(0)
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
     -webkit-animation: 0
     animation: 0
     opacity: 1
@@ -758,6 +816,11 @@
 
   #main
     .section
+      &.benefits
+        .row
+          .boxinfo
+            height: 220px
+      
       &.cinema
         .info
           >.subtitle
