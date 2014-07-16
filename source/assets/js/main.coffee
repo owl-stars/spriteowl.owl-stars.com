@@ -3,11 +3,18 @@
 #= require sass-bootstrap/js/collapse
 #= require sass-bootstrap/js/transition
 #= require sass-bootstrap/js/modal
+#= require sass-bootstrap/js/carousel
 #= require sass-bootstrap/js/tab
+
 
 jQuery ->
   $("#mailchimpform").ajaxChimp({url: "http://wejustdostuff.us7.list-manage.com/subscribe/post?u=9d88ce76bb9c9bb3bea3601f0&id=2e63c2f86c"})
 
+  $("#quotecarousel").on "slide.bs.carousel", ->
+    $("#quotecarousel .preview img").delay( 300 ).fadeTo(0, 0)
+    $("#quotecarousel .preview img").delay( 500 ).fadeTo("slow", 1)
+    return
+  
   $(".tabbox .nav-tabs a").click((event) ->
     event.preventDefault()
     $(this).tab("show")

@@ -199,28 +199,37 @@ title: Home
             %p.content Import the generated sprite stylesheet + PNG file(s) into your project
 
 
+.section.quotes
+  .container
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1.intro
+        %h2 What others say about Spriteowl
+    .row
+      #quotecarousel.carousel.slide{"data-ride" => "carousel"}
+      
+        / Indicators
+        %ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#quotecarousel"}
+          %li{"data-slide-to" => "1", "data-target" => "#quotecarousel"}
+          %li{"data-slide-to" => "2", "data-target" => "#quotecarousel"}
+          
+        / Wrapper for slides
+        .carousel-inner
+          .item.active
+            %img.logoImg{src: "assets/img/content/clientDummy.png"}
+            .slideText
+              %p.quote Spriteowl has been the perfect addition to our workflow. It has allowed me to spend more time in Photoshop, doing what I love, while providing accurate results I can trust.
+              %p.user Jan Halfar, CTO
+              
+          .item
+            %img.logoImg{src: "assets/img/content/clientDummy.png"}
+            .slideText
+              %p.quote Just wanted to say thank you for putting this together and making our development cycle so much easier!
+              %p.user Jon Humphrey 
+              
+          .item
+            %img.logoImg{src: "assets/img/content/clientDummy.png"}
+            .slideText
+              %p.quote Spriteowl has been the perfect addition to our workflow. It has allowed me to spend more time in Photoshop, doing what I love, while providing accurate results I can trust.
+              %p.user Max Muster, Senoir Webdesigner
 
-
--#.section
--#  .wrapper.quotes
--#    %h2 What others say about Spriteowl
--#
--#    .flexslider
--#      %ul.slides
--#        %li.slide
--#          %img.logoImg{src: "assets/img/content/clientDummy.png"}
--#          .slideText
--#            %p.quote Spriteowl has been the perfect addition to our workflow. It has allowed me to spend more time in Photoshop, doing what I love, while providing accurate results I can trust.
--#            %p.user Max Muster, Senoir Webdesigner
--#
--#        %li.slide
--#          %img.logoImg{src: "assets/img/content/clientDummy.png"}
--#          .slideText
--#            %p.quote Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.
--#            %p.user Max Muster, Senoir Webdeveloper
--#
--#        %li.slide
--#          %img.logoImg{src: "assets/img/content/clientDummy.png"}
--#          .slideText
--#            %p.quote Neque pecun modut est neque nonor et imper ned libidig met, consectetur adipiscing elit, sed ut labore et dolore magna aliquam is nostrud exercitation ullam mmodo consequet.
--#            %p.user Max Muster, Senoir Webdesigner
