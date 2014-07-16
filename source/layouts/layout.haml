@@ -1,7 +1,7 @@
 !!!5
-/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
-/[if IE 8] <html class="no-js lt-ie9">
+/[if lt IE 7] <html class="lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="lt-ie9 lt-ie8">
+/[if IE 8] <html class="lt-ie9">
 %html
   %head
     %meta{:charset => "utf-8"}
@@ -49,10 +49,12 @@
               %label{for: "mc-email"}
 
         .row.info
-          .col-xs-12.col-sm-5
+          .col-xs-12.col-sm-3
             .twitter
               %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
-          .col-xs-12.col-sm-7.links
+          .col-xs-12.col-sm-9.links
+            .changelog
+              %a{title: "Spriteowl Changelog", href: "/changelog.html"} Changelog
             .press-kit
               %a{title: "Owl-Stars Press kit", href: "http://www.owl-stars.com/assets/download/Owl-Stars_Press-kit.zip", target: "_blank"} Press kit
             .madeby
