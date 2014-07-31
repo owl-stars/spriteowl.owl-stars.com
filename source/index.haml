@@ -12,8 +12,63 @@ title: Home
 
       .col-sm-6.preview.hidden-xs.startslidemodule-in-right
         =image_tag "cinema/spriteowl-extension-colors.png", :alt => "", :class => "img-responsive"
+        
+        
+.section.quotes
+  .container
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1.intro
+        %h2 What others say about Spriteowl
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1
+        #quotecarousel.carousel.slide{"data-ride" => "carousel"}
+        
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#quotecarousel"}
+            %li{"data-slide-to" => "1", "data-target" => "#quotecarousel"}
+            %li{"data-slide-to" => "2", "data-target" => "#quotecarousel"}
+            %li{"data-slide-to" => "3", "data-target" => "#quotecarousel"}
+            %li{"data-slide-to" => "4", "data-target" => "#quotecarousel"}
+            
+          .carousel-inner
+            .item.active
+              .logoImg
+                %img{src: "assets/img/content/quotes/sm.png"}
+              .slideText
+                %p.quote For devs who love PS and sprites, Spriteowl lets you export your PS sprites to PNG/CSS/LESS/Sass/SCSS and Stylus.
+                %p.user #{link_to 'Smashing Magazine', 'https://twitter.com/smashingmag/status/488948104771952640' }
+                
+            .item
+              .logoImg
+                %img{src: "assets/img/content/quotes/ps.png"}
+              .slideText
+                %p.quote Spriteowl is a Photoshop extension that takes over the boring part when working with sprite images and CSS.
+                %p.user #{link_to 'Photoshoplr', 'http://madebyvadim.tumblr.com/post/79147546360/spriteowl-20' }
 
-.section.howto
+            .item
+              .logoImg
+                %img{src: "assets/img/content/quotes/default.png"}
+              .slideText
+                %p.quote We have used Spriteowl and Cssowl in several large projects and it works like a charme!
+                %p.user J. Halfar, CTO
+                
+            .item
+              .logoImg
+                %img{src: "assets/img/content/quotes/default.png"}
+              .slideText
+                %p.quote Just wanted to say thank you for putting this together and making our development cycle so much easier!
+                %p.user A. Humphrey, Web Developer
+                
+            .item
+              .logoImg
+                %img{src: "assets/img/content/quotes/default.png"}
+              .slideText
+                %p.quote I want to tell your plug-in is just great, and solved me a lot of problems when working with sprite images.
+                %p.user M. Patterson, Frontend Developer
+              
+
+
+.section.howto.bgDark
   .container
     .row
       .col-xs-12.col-md-8.col-md-offset-2.intro
@@ -50,7 +105,7 @@ title: Home
           <strong>Want to find out more about Spriteowl in detail? Check out the #{link_to 'documentation and walktrough', '/documentation.html'}</strong>.
 
 
-.section.bgDark.features
+.section.features
   .container
     .row
       .col-sm-12
@@ -89,7 +144,7 @@ title: Home
           %p.content Besides the basic mixins, Spriteowl is designed to work well with the <strong>#{link_to 'Cssowl mixin library', 'http://cssowl.owl-stars.com' }</strong>. Check it out!
 
 
-.section.screencast
+.section.screencast.bgDark
   .container
     .row
       .col-xs-12.col-md-10.col-md-offset-1.intro
@@ -104,7 +159,7 @@ title: Home
           %iframe{allowfullscreen: "", frameborder: "0", height: "100%", src: "//www.youtube.com/embed/8GZ3WuhWuWU?color=white", width: "100%"}
 
 
-.section.bgDark.benefits
+.section.benefits
   .container
     .row
       .col-xs-12.col-md-10.col-md-offset-1.intro
@@ -197,6 +252,5 @@ title: Home
             =image_tag "content/howto/yes-how3.png", :alt => "", :class => "teaserImg"
             %h3.title CSS, LESS, SASS/SCSS, Stylus + PNG
             %p.content Import the generated sprite stylesheet + PNG file(s) into your project
-
 
 

@@ -544,30 +544,43 @@
     &.quotes
 
       .carousel
+        margin-bottom: 30px
         
+        .carousel-indicators
+          bottom: -45px
+
+          .active
+            margin-right: 5px
 
         .carousel-inner
           margin: 0
           padding: 0
+          
 
           > .item
             list-style-type: none
 
             > .logoImg
               float: left
-              width: 130px!important
+              width: 23%
+              text-align: right
 
             > .slideText
               float: left
-              width: 70%
+              width: 77%
 
               > .quote
                 +fontSpecialRegular
                 font-size: $fontSizeTitle
+                line-height: 1.5em
                 margin: 10px 0 10px 20px
 
               > .user
                 margin-left: 20px
+                
+                a
+                  color: $colorFontDefault
+                  text-decoration: none
 
 
 
@@ -725,6 +738,17 @@
       &.features
         .box
           height: 170px
+          
+      &.quotes
+        .carousel
+          .carousel-inner
+            > .item
+              > .logoImg
+                width: 20%
+        
+              > .slideText
+                width: 70%
+        
 
       &.benefits, &.howto
         .row
