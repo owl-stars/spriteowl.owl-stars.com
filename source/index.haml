@@ -13,8 +13,49 @@ title: Home
       .col-sm-6.preview.hidden-xs.startslidemodule-in-right
         =image_tag "cinema/spriteowl-extension-colors.png", :alt => "", :class => "img-responsive"
         
-        
-.section.quotes
+       
+       
+.section.howto
+  .container
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2.intro
+        %h2.introTitle What is Spriteowl?
+
+        %p.introText
+          <strong>Spriteowl is a Photoshop extension</strong> that takes over the boring part when working with <strong>sprite images and CSS</strong>.
+          <strong>In other words, no more annoying measuring</strong>.
+
+    .row
+      .col-sm-4
+        .box.slidemodule
+          .arrow
+          =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
+          %h3.title Photoshop
+          %p.content Place your elements and name your groups and layers in your Photoshop file.
+
+      .col-sm-4
+        .box.slidemodule
+          .arrow
+          =image_tag "content/howto/yes-how2-magic.png", :alt => "", :class => "teaserImg"
+          %h3.title Spriteowl
+          %p.content Choose your export options in the Spriteowl Photoshop extension and let the magic happen!
+
+      .col-sm-4
+        .box.slidemodule
+          =image_tag "content/howto/yes-how3.png", :alt => "", :class => "teaserImg"
+          %h3.title  Code + PNG
+          %p.content Import the generated CSS, LESS, SASS/SCSS, Stylus code + PNG file(s) into your project.
+
+    .row
+      .col-xs-12.col-md-4.col-md-offset-2
+        .moreinfo.slidemodule
+          %h3 Check out the Spriteowl #{link_to 'documentation and walktrough', '/documentation.html'}.
+      .col-xs-12.col-md-4
+        .moreinfo.slidemodule
+          %h3 Watch our #{link_to 'screencast', '#screencast'} how to get started with Spriteowl</strong>.
+          
+          
+.section.quotes.bgDark
   .container
     .row
       .col-xs-12.col-md-10.col-md-offset-1.intro
@@ -68,41 +109,6 @@ title: Home
               
 
 
-.section.howto.bgDark
-  .container
-    .row
-      .col-xs-12.col-md-8.col-md-offset-2.intro
-        %h2.introTitle What is Spriteowl?
-
-        %p.introText
-          <strong>Spriteowl is a Photoshop extension</strong> that takes over the boring part when working with <strong>sprite images and CSS</strong>.
-          <strong>In other words, no more annoying measuring</strong>.
-
-    .row
-      .col-sm-4
-        .box.slidemodule
-          .arrow
-          =image_tag "content/howto/how1.png", :alt => "", :class => "teaserImg"
-          %h3.title Photoshop
-          %p.content Place your elements and name your groups and layers in your Photoshop file.
-
-      .col-sm-4
-        .box.slidemodule
-          .arrow
-          =image_tag "content/howto/yes-how2-magic.png", :alt => "", :class => "teaserImg"
-          %h3.title Spriteowl
-          %p.content Choose your export options in the Spriteowl Photoshop extension and let the magic happen!
-
-      .col-sm-4
-        .box.slidemodule
-          =image_tag "content/howto/yes-how3.png", :alt => "", :class => "teaserImg"
-          %h3.title  Code + PNG
-          %p.content Import the generated CSS, LESS, SASS/SCSS, Stylus code + PNG file(s) into your project.
-
-    .row
-      .col-xs-12.col-md-8.col-md-offset-2
-        .moreinfo.slidemodule
-          <strong>Want to find out more about Spriteowl in detail? Check out the #{link_to 'documentation and walktrough', '/documentation.html'}</strong>.
 
 
 .section.features
@@ -144,7 +150,7 @@ title: Home
           %p.content Besides the basic mixins, Spriteowl is designed to work well with the <strong>#{link_to 'Cssowl mixin library', 'http://cssowl.owl-stars.com' }</strong>. Check it out!
 
 
-.section.screencast.bgDark
+.section.screencast.bgDark#screencast
   .container
     .row
       .col-xs-12.col-md-10.col-md-offset-1.intro
