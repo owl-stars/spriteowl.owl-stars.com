@@ -17,30 +17,39 @@ title: Installation & FAQ
           To buy, download and install the Spriteowl Photoshop extension, please follow these 5 steps:
 
     .row
-      .col-sm-7
+      .col-sm-9
         %ol
           %li
-            %p
-              Buy the Spriteowl Photoshop extension now for only <strong>$20</strong> via #{link_to 'Paypal', 'html://', :target => '_blank'}.
+            %div
+              Download and unzip the Spriteowl Photoshop extension for
+              %strong
+                %a{title: "How to", href: "/assets/download/Spriteowl-v1.3.1.zip", onClick: "ga('send', 'event', { eventCategory: 'download', eventAction: 'file', eventLabel: 'Spriteowl'});"} Free.
           %li
-            %p
-              Shortly after your purchase you will receive an <strong>email with a download link</strong>. Please download and unzip the file.
-          %li
-            %p
-              Launch the <strong>Adobe Extension Manager</strong> (be sure to open corresponding and latest version of Adobe Extension Manager CS6 or CC. The Adobe Extension Manager CC is for Photoshop CC and Photoshop CC 2014)
+            %div
+              %h4 Photoshop CC2015:
+              %p Open the appropriate directory.<br>
+              %p.sp
+                <strong>MAC:</strong> /Library/Application\ Support/Adobe/CEP/extensions/<br>
+              %p
+                <strong class="wn">WINDOWS:</strong> Windows 64: C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\ or<br>
+                Windows 32: C:\Program Files\Common Files\Adobe\CEP\extensions\
+              %p.sp
+                Copy the unzipped <strong>Spriteowl-CC2015</strong> folder into the extensions folder. If the Adobe\CEP\extensions folder does not exist, you can create it.
               %br
-              %em
-                <strong>Windows users:</strong> You may need to run the Adobe Extension Manager as Administrator (right-click the Adobe Extension Manager icon and select “Run as Administrator”).
+              %h4 Photoshop CS6, CC & CC2014:
+              %p For <strong>Photoshop CS6</strong> launch the <strong>Adobe Extension Manager CS6</strong>. For <strong>Photoshop CC & CC2014</strong> launch the <strong>Adobe Extension Manager CC</strong>. In the Adobe Extension Manager click "<strong>Install</strong>" an choose the correct version of the Spriteowl Photoshop Extension file (.zxp) then click "<strong>Ok</strong>" or "<strong>Open</strong>".           
+              %p.sp
+                %em
+                  Be sure to open corresponding and latest version of Adobe Extension Manager CS6 or CC
+                  %br
+                  <strong>Windows users:</strong> You may need to run the Adobe Extension Manager as Administrator (right-click the Adobe Extension Manager icon and select “Run as Administrator”).
           %li
-            %p
-              In the Adobe Extension Manager click "<strong>Install</strong>" an choose the correct version of the Spriteowl Photoshop Extension file (.zxp) then click "<strong>Ok</strong>" or "<strong>Open</strong>".
-          %li
-            %p
+            %div
               Now you will find Spriteowl in the Adobe Photoshop menu at
               %br
               <strong>Window > Extensions > Spriteowl</strong>.
 
-      .col-sm-5
+      .col-sm-3
         .teaserImg.slidemodule
           =image_tag "content/owls/tree-owl.png", :alt => ""
 
@@ -62,39 +71,15 @@ title: Installation & FAQ
           .content
             %ul
               %li
-                <strong>Be sure you have opened the corresponding version of the Adobe Extension Manager!</strong> For example, for the CC Photoshop Extension you will need to use the Adobe Extension Manager CC. For the CC 2014 Extension you also need the Adobe Extension Manager CC!
+                <strong>Be sure you have opened the corresponding version of the Adobe Extension Manager!</strong> For example, for the CC Photoshop Extension you will need to use the Adobe Extension Manager CC. For the CC2014 Extension you also need the Adobe Extension Manager CC!
               %li
                 Close Photoshop before you install the extension with the Adobe Extension Manager.
-
-        .box.expandBox.slidemodule
-          %h3.title
-            How do I get Spriteowl updates?
-          .content
-            We will continuously work on Spriteowl and if we release a new version, we will send you an email to the adress you gave us at purchase.
-
-        .box.expandBox.slidemodule
-          %h3.title
-            What do I get for my money?
-          .content
-            %ul
-              %li
-                You will get the Spriteowl Photoshop Extension for Photoshop CS6, CC & CC 2014 for Mac & Windows systems.
-              %li
-                A single license for your personal computer.
-              %li
-                Free updates and bug fixes.
 
         .box.expandBox.slidemodule
           %h3.title
             What can Spriteowl do?
           .content
             Spriteowl is aimed to improve the workflow between designers and developers: Designers work with Photoshop as usual. Once the creation is done, they can very easily export a stylesheet and retina ready PNGs from their Photoshop sprite file with the help of Spriteowl. And the exported files include everything the developers need.
-
-        .box.expandBox.slidemodule
-          %h3.title
-            I lost my download link. What can I do?
-          .content
-            Please send us your purchase email to #{mail_to 'support@owl-stars.com', 'support@owl-stars.com'} and we will re-send you your download link.
 
         .box.expandBox.slidemodule
           %h3.title
