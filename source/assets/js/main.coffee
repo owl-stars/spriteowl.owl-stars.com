@@ -23,6 +23,11 @@ jQuery ->
     $target.toggleClass('active', !$target.hasClass('active'))
   )
 
+$(".downloadLink").on "click", ->
+  ga "send", "event",
+    eventCategory: "download"
+    eventAction: "file"
+    eventLabel: "Spriteowl"
 
 (($) ->
   $.fn.visible = (partial) ->
