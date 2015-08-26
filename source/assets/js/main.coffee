@@ -24,10 +24,7 @@ jQuery ->
   )
 
 $(".downloadLink").on "click", ->
-  ga "send", "event",
-    eventCategory: "download"
-    eventAction: "file"
-    eventLabel: "Spriteowl"
+  _gaq.push [ "_trackEvent", "File", "download", "Spriteowl" ]
 
 (($) ->
   $.fn.visible = (partial) ->
