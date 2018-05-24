@@ -2,6 +2,7 @@
 #= require sass-bootstrap/js/collapse
 #= require sass-bootstrap/js/transition
 #= require sass-bootstrap/js/modal
+#= require sass-bootstrap/js/carousel
 #= require sass-bootstrap/js/tab
 
 jQuery ->
@@ -15,6 +16,8 @@ jQuery ->
     $target.toggleClass('active', !$target.hasClass('active'))
   )
 
+$(".downloadLink").on "click", ->
+  _gaq.push [ "_trackEvent", "File", "download", "Spriteowl" ]
 
 (($) ->
   $.fn.visible = (partial) ->

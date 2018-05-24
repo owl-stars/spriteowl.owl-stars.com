@@ -27,9 +27,9 @@
 
   > .buyButtonPrice
     +fontSpecialRegular
-    font-size: $fontSizeTitle
+    font-size: $fontSizeSuperBig
     float: left
-    padding: 5px 20px 0
+    padding: 11px 18px 0
 
     > .bigPrice
       padding-left: 2px
@@ -310,10 +310,10 @@
       .row
         .moreinfo
           text-align: center
-          margin-top: 50px
+          margin-top: 40px
           background: $colorBgLight
           +border-radius($cornerRaduis)
-          padding: 10px 20px
+          padding: 5px 20px 10px
 
         .box
           text-align: center
@@ -323,7 +323,6 @@
             margin: 20px 0 10px
 
           .arrow
-            //+sprite-graphic-howtoArrowDown-absolute-outside(bottom,center,0,-20px)
             +cssowl-sprite-absolute-outside($sprite-graphic-howtoArrowDown, bottom, center, 0, -20px)
 
 
@@ -529,11 +528,23 @@
           font-size: $fontSizeBig
           margin: 20px 0
 
-          p
+          > div
             +fontDefaultRegular
             font-size: $fontSizeBase
             border-left: 1px dashed $colorFontDefault
             padding: 10px 0 0 20px
+          
+            h4
+              font-size: $fontSizeSubTitle
+              margin-bottom: 5px
+              margin-top: 15px
+          
+            .sp 
+              margin-top: 10px
+        
+            a
+              color: $colorFontDefault
+              
 
       .teaserImg
         margin-top: 30px
@@ -543,45 +554,44 @@
 
     &.quotes
 
-      > .flexslider
-        background: none
-        border: none
-        margin: 0
-        -webkit-border-radius: 0
-        -moz-border-radius: 0
-        -o-border-radius: 0
-        border-radius: 0
-        box-shadow: none
-        -webkit-box-shadow: none
-        -moz-box-shadow: none
-        -o-box-shadow: none
-        margin-bottom: 50px
+      .carousel
+        margin-bottom: 30px
+        
+        .carousel-indicators
+          bottom: -45px
 
-        .flex-direction-nav a
-          overflow: visible
+          .active
+            margin-right: 5px
 
-        .slides
+        .carousel-inner
           margin: 0
           padding: 0
+          
 
-          > .slide
+          > .item
             list-style-type: none
 
             > .logoImg
               float: left
-              width: 130px!important
+              width: 23%
+              text-align: right
 
             > .slideText
               float: left
-              width: 70%
+              width: 77%
 
               > .quote
                 +fontSpecialRegular
                 font-size: $fontSizeTitle
+                line-height: 1.5em
                 margin: 10px 0 10px 20px
 
               > .user
                 margin-left: 20px
+                
+                a
+                  color: $colorFontDefault
+                  text-decoration: none
 
 
 
@@ -645,7 +655,7 @@
       text-align: center
 
     .links
-      padding-top: 20px
+      padding-top: 18px
       text-align: center
       margin-bottom: 40px
 
@@ -659,7 +669,7 @@
 
       .madeby
         display: inline-block
-        margin: 2px 15px
+        margin: 2px 0 0 15px
 
         > .wjds
           margin-left: 5px
@@ -689,6 +699,11 @@
     .info
       .twitter
         float: left
+        text-align: left
+        
+      > .twitter-tweet-button, > .twitter-follow-button
+        float: left
+        
 
       .links
         text-align: right
@@ -698,6 +713,7 @@
     >.navbar
       nav
         width: auto
+        padding-right: 0
         .nav
           margin: 37px 0 0 0
           border-top: none
@@ -733,6 +749,17 @@
       &.features
         .box
           height: 170px
+          
+      &.quotes
+        .carousel
+          .carousel-inner
+            > .item
+              > .logoImg
+                width: 20%
+        
+              > .slideText
+                width: 70%
+        
 
       &.benefits, &.howto
         .row
