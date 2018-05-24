@@ -2,9 +2,9 @@
   "private": true,
   "name": "middleman-site-spriteowl",
   "dependencies": {
-    "jquery": "~1.9",
-    "cssowl": "~1.2",
-    "flexslider": "latest",
+    "jquery": "~1.11",
+    "cssowl": "~1.3",
+    "flexslider": "~2.5",
     "sass-bootstrap": "~3.0"
   }
 }

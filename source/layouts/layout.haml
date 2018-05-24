@@ -39,19 +39,9 @@
               Save time, work faster!
 
           .col-sm-6.col-md-5.col-xs-12.newsletter
-            .title
-              Don't miss our software updates!
-            %form#mailchimpform
-              %input#mc-email{placeholder: "Your email address", type: "email"}
-              %button{type: "submit"} Subscribe
-              %br
-              %label{for: "mc-email"}
 
         .row.info
           .col-xs-12.col-sm-4
-            .twitter
-              %a.twitter-tweet-button{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "The Spriteowl Photoshop extension exports your Sprite file to retina ready PNGs & CSS, LESS, SASS/SCSS or Stylus code", :url => "http://spriteowl.owl-stars.com"}} Tweet
-              %a.twitter-follow-button{href: "https://twitter.com/Owl_Stars", "data-show-count" => "false"} Follow @Owl_Stars
 
           .col-xs-12.col-sm-8.links
             .changelog
@@ -64,5 +54,3 @@
 
 
     = javascript_include_tag "main"
-    :javascript
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

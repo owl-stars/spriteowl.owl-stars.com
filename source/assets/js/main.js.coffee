@@ -1,4 +1,4 @@
-#= require jquery/jquery.js
+#= require jquery/dist/jquery.js
 #= require sass-bootstrap/js/collapse
 #= require sass-bootstrap/js/transition
 #= require sass-bootstrap/js/modal
